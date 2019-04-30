@@ -26,7 +26,8 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 <?php get_template_part( 'global-templates/dogs', 'frontpage' ); ?> <!-- dogs -->
 
-<div class="wrapper" id="page-wrapper">
+
+<div class="wrapper" id="frontpage-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 

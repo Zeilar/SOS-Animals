@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
