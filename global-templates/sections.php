@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $sections = new WP_Query([
-    'post_type' => 'mp_sections',
+    'post_type' => 'sosa_sections',
     'posts_per_page' => 3,
 ]);
 

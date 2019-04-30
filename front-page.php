@@ -24,6 +24,8 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 <?php get_template_part( 'global-templates/usps' ); ?> <!-- unique selling points -->
 
+<?php get_template_part( 'global-templates/dogs', 'frontpage' ); ?> <!-- dogs -->
+
 <div class="wrapper" id="page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
@@ -45,9 +47,5 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 	</div> <!-- content -->
 
 </div> <!-- wrapper -->
-
-<?php get_template_part( 'global-templates/sections' ); ?> <!-- sections -->
-
-<?php get_template_part( 'global-templates/contact' ); ?> <!-- contact form -->
  
 <?php get_footer(); ?>

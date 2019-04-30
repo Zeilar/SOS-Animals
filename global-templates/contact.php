@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $contact = new WP_Query([
-    'post_type' => 'mp_contact',
+    'post_type' => 'sosa_contact',
     'posts_per_page' => 1,
 ]);
 

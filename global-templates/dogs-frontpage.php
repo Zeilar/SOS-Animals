@@ -9,27 +9,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$usps = new WP_Query([
-    'post_type' => 'sosa_usp',
-    'posts_per_page' => 3,
+$dogs = new WP_Query([
+    'post_type' => 'sosa_dog',
+    'posts_per_page' => 8,
 ]);
 
-if ($usps->have_posts()) {
+if ($dogs->have_posts()) {
 
 ?>
 
-	<div class="wrapper" id="wrapper-usps">
+	<div class="wrapper" id="wrapper-dogs">
 
         <div class="container">
 
             <div class="row">
 
                 <?php
-                    while ($usps->have_posts()) {
+                    while ($dogs->have_posts()) {
                         
-                        $usps->the_post();
+                        $dogs->the_post();
 
-                        get_template_part('loop-templates/content', 'usp');
+                        get_template_part('loop-templates/content', 'dog');
                     }
 
                     wp_reset_postdata(); // ALWAYS RESET POSTDATA
