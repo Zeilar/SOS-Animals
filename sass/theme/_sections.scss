@@ -1,0 +1,24 @@
+.sections {
+
+}
+
+#wrapper-sections section {
+
+    background-color: rgb(255, 200, 0);
+
+    padding: 10px;
+
+    a {
+        color: rgb(0, 100, 255);
+    }
+
+    a:hover {
+        color: rgb(0, 0, 255);
+        text-decoration: none;
+    }
+
+    h2, h3, h4, h5, h6, p {
+
+        padding: 10px 5px;
+    }
+}
