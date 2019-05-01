@@ -2,7 +2,6 @@
 /**
  * Register ACF Blocks
  *
- * inc/acf-blocks.php
  */
 
 function register_acf_blocks() {

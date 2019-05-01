@@ -1,4 +1,4 @@
-<div class="col">
+<div class="col d-flex justify-content-around">
 
     <div class="dog">
 
