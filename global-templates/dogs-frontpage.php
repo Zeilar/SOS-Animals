@@ -15,8 +15,6 @@ if (!$amount) {
     $amount = 8;
 }
 
-var_dump($amount);
-
 $dogs = new WP_Query([
     'post_type' => 'sosa_dog',
     'posts_per_page' => $amount,
