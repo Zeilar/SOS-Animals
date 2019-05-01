@@ -1,10 +1,10 @@
-<div class="col d-flex justify-content-around">
+<div class="col d-flex justify-content-center">
 
     <div class="dog">
 
-        <div class="card mt-5">
+        <div class="card rounded-lg mt-4">
 
-            <img class="card-image" src="<?php 
+            <img class="card-image rounded-top" src="<?php 
             
             if(the_field('dog_thumbnail_frontpage_image')) {
 
