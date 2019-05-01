@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $amount = get_field('amount_of_dogs_frontpage', 'option');
 
 if (!$amount) {
-    $amount = 8;
+    $amount = 6;
 }
 
 $dogs = new WP_Query([
