@@ -23,6 +23,7 @@ $understrap_includes = array(
 	// '/acf.php',                             // Load ACF Plugin.
 	// '/acf-fieldgroups.php',                 // Load ACF Field Groups.
 	'/acf-blocks.php',                      // Register ACF Blocks.
+	'/acf-options.php',                      // Register ACF Options.
 	'/customizer.php',                      // Customizer additions.
 	'/custom-comments.php',                 // Custom Comments file.
 	'/jetpack.php',                         // Load Jetpack compatibility file.

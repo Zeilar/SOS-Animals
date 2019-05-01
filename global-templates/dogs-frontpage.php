@@ -9,9 +9,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+$amount = get_field('amount_of_dogs_frontpage', 'option');
+
+if ($amount <= 0) {
+    return;
+}
+
 $dogs = new WP_Query([
     'post_type' => 'sosa_dog',
-    'posts_per_page' => 8,
+    'posts_per_page' => $amount,
 ]);
 
 if ($dogs->have_posts()) {
