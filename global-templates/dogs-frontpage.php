@@ -11,9 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $amount = get_field('amount_of_dogs_frontpage', 'option');
 
-if ($amount <= 0) {
+if (!$amount) {
     return;
 }
+
+var_dump($amount);
 
 $dogs = new WP_Query([
     'post_type' => 'sosa_dog',
