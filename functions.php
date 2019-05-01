@@ -2,14 +2,14 @@
 /**
  * Understrap functions and definitions
  *
- * @package myportfolio
+ * @package understrap
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$myportfolio_includes = array(
+$understrap_includes = array(
 	'/theme-settings.php',                  // Initialize theme default settings.
 	'/setup.php',                           // Theme setup and custom theme supports.
 	'/widgets.php',                         // Register widget area.
@@ -18,6 +18,11 @@ $myportfolio_includes = array(
 	'/pagination.php',                      // Custom pagination for this theme.
 	'/hooks.php',                           // Custom hooks.
 	'/extras.php',                          // Custom functions that act independently of the theme templates.
+	//'/custom-post-types.php',               // Load Custom Post Types.
+	//'/custom-taxonomies.php',               // Load Custom Taxonomies.
+	// '/acf.php',                             // Load ACF Plugin.
+	// '/acf-fieldgroups.php',                 // Load ACF Field Groups.
+	'/acf-blocks.php',                      // Register ACF Blocks.
 	'/customizer.php',                      // Customizer additions.
 	'/custom-comments.php',                 // Custom Comments file.
 	'/jetpack.php',                         // Load Jetpack compatibility file.
@@ -27,7 +32,7 @@ $myportfolio_includes = array(
 	'/deprecated.php',                      // Load deprecated functions.
 );
 
-foreach ( $myportfolio_includes as $file ) {
+foreach ( $understrap_includes as $file ) {
 	$filepath = locate_template( 'inc' . $file );
 	if ( ! $filepath ) {
 		trigger_error( sprintf( 'Error locating /inc%s for inclusion', $file ), E_USER_ERROR );
