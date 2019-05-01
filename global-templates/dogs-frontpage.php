@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $amount = get_field('amount_of_dogs_frontpage', 'option');
 
 if (!$amount) {
-    return;
+    $amount = 8;
 }
 
 var_dump($amount);
