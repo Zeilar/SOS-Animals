@@ -6,12 +6,12 @@
 
             <img class="card-image rounded-top" src="<?php 
             
-            if(the_field('dog_thumbnail_frontpage_image')) {
+            if (the_field('dog_thumbnail_frontpage_image')) {
 
                 the_field('dog_thumbnail_frontpage_image');
             }
 
-            elseif(the_field('dog_thumbnail_frontpage_image_url')) {
+            elseif (the_field('dog_thumbnail_frontpage_image_url')) {
 
                 the_field('dog_thumbnail_frontpage_image_url');
             }

@@ -1,8 +1,8 @@
-<div class="col justify-content-around d-flex mt-2">
+<div class="col justify-content-around d-flex">
 
     <div class="usp rounded-lg">
 
-        <div class="usp-icon d-flex flex-row justify-content-center">
+        <div class="usp-icon mb-2 mt-2 d-flex flex-row justify-content-center">
             <i class="fas fa-2x <?php the_field('usp_frontpage_icon'); ?>"></i>
         </div>
  

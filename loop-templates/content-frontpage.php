@@ -10,8 +10,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<footer class="entry-footer">
+<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<?php edit_post_link( __( 'Edit', 'myportfolio' ), '<span class="edit-link">', '</span>' ); ?>
+	<div class="entry-content">
 
-</footer>
+		<?php the_content(); ?>
+
+	</div> <!-- entry-content -->
+
+	<footer class="entry-footer">
+
+		<?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
+
+	</footer> <!-- entry-footer -->
+
+</article> <!-- #post-{ID} -->
