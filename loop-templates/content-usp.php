@@ -1,4 +1,4 @@
-<div class="col justify-content-around d-flex">
+<div class="col col-lg col-md-6 justify-content-around d-flex mt-2">
 
     <div class="usp rounded-lg">
 

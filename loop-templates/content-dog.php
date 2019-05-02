@@ -16,7 +16,7 @@
                 the_field('dog_thumbnail_frontpage_image_url');
             }
             
-            ?>" alt="<?php _e('Dog image', 'sos-animals'); ?>">
+            ?>" alt="<?php _e('Dog image', 'myportfoolio'); ?>">
 
             <!-- End of card thumbnail -->
 
@@ -26,7 +26,7 @@
 
                 <?php the_content(); ?>
 
-                <a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e('Read More', 'sos-animals'); ?></a>
+                <a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e('Read More', 'myportfolio'); ?></a>
 
             </div> <!-- card-body -->
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * USPs setup.
+ * Dogs on frontpage setup.
  *
  * @package myportfolio
  */
