@@ -1,4 +1,4 @@
-<div class="jumbotron jumbotron-fluid bg-info" style="background-image: url("<?php the_field('hero_background_image_url'); ?>");">
+<div class="jumbotron jumbotron-fluid bg-info" style="background: url(' <?php the_field('hero_background_image_url'); ?> '); background-size: 100vw;">
 
     <div class="container">
 

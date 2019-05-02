@@ -9,18 +9,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$amount = get_field('amount_of_dogs_frontpage', 'option');
+$dog_amount = get_field('amount_of_dogs_frontpage', 'option');
 
 if (!$amount) {
-    $amount = 6;
+    $dog_amount = 6;
 }
 
-$dogs = new WP_Query([
+$dog = new WP_Query([
     'post_type' => 'sosa_dog',
-    'posts_per_page' => $amount,
+    'posts_per_page' => $dog_amount,
 ]);
 
-if ($dogs->have_posts()) {
+if ($dog->have_posts()) {
 
 ?>
 
@@ -31,9 +31,9 @@ if ($dogs->have_posts()) {
             <div class="row">
 
                 <?php
-                    while ($dogs->have_posts()) {
+                    while ($dog->have_posts()) {
                         
-                        $dogs->the_post();
+                        $dog->the_post();
 
                         get_template_part('loop-templates/content', 'dog');
                     }

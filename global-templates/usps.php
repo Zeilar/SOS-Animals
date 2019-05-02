@@ -9,12 +9,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$usps = new WP_Query([
+$usp_amount = get_field('amount_of_usps_frontpage', 'option');
+
+if (!$usp_amount) {
+    $usp_amount = 3;
+}
+
+$usp = new WP_Query([
     'post_type' => 'sosa_usp',
-    'posts_per_page' => 3,
+    'posts_per_page' => $usp_amount,
 ]);
 
-if ($usps->have_posts()) {
+if ($usp->have_posts()) {
 
 ?>
 
@@ -25,14 +31,16 @@ if ($usps->have_posts()) {
             <div class="row justify-content-center mx-auto">
 
                 <?php
-                    while ($usps->have_posts()) {
+
+                    while ($usp->have_posts()) {
                         
-                        $usps->the_post();
+                        $usp->the_post();
 
                         get_template_part('loop-templates/content', 'usp');
                     }
 
                     wp_reset_postdata(); // ALWAYS RESET POSTDATA
+
                 ?>
                 
             </div> <!-- row -->
