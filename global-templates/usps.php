@@ -22,7 +22,7 @@ if ($usps->have_posts()) {
 
         <div class="container">
 
-            <div class="row mx-auto">
+            <div class="row justify-content-center mx-auto">
 
                 <?php
                     while ($usps->have_posts()) {
