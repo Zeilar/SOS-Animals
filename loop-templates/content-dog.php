@@ -14,7 +14,7 @@
             elseif (the_field('dog_thumbnail_frontpage_image_url')) {
 
                 the_field('dog_thumbnail_frontpage_image_url');
-            }
+            } 
             
             ?>" alt="<?php _e('Dog image', 'myportfoolio'); ?>">
 

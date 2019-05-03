@@ -13,7 +13,7 @@
 
             </a>
 
-        <?php } ?>
+        <?php } ?> <!-- end of if -->
             
     </div> <!-- container -->
         
