@@ -1,0 +1,23 @@
+#wrapper-dogs-frontpage {
+
+    .card {
+
+        width: 20rem;
+
+        .card-body {
+
+            background-color: #f9f9f9;
+
+            a:hover {
+                
+                color: $primary;
+                background-color: white;
+            }
+        }
+
+        img {
+            height: 13rem;
+        }
+        
+    }
+}

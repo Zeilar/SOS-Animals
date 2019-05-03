@@ -1,0 +1,28 @@
+#wrapper-archive-dogs {
+
+    .card {
+
+        .list-group-item {
+
+            background-color: #f9f9f9;
+        }
+
+        width: 22rem;
+
+        .card-body {
+
+            background-color: #f9f9f9;
+
+            a:hover {
+                
+                color: $primary;
+                background-color: white;
+            }
+        }
+
+        img {
+            height: 14rem;
+        }
+        
+    }
+}

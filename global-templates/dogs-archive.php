@@ -9,10 +9,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$dog_amount = get_field('amount_of_dogs_frontpage', 'option');
+$dog_amount = get_field('amount_of_dogs_archive', 'option');
 
 if (!$amount) {
-    $dog_amount = 6;
+    $dog_amount = 8;
 }
 
 $dog = new WP_Query([
@@ -24,7 +24,7 @@ if ($dog->have_posts()) {
 
 ?>
 
-	<div class="wrapper" id="wrapper-dogs">
+	<div class="wrapper" id="wrapper-archive-dogs">
 
         <div class="container">
 

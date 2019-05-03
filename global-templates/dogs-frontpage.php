@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $dog_amount = get_field('amount_of_dogs_frontpage', 'option');
 
-if (!$amount) {
+if (!$dog_amount) {
     $dog_amount = 6;
 }
 
@@ -24,7 +24,7 @@ if ($dog->have_posts()) {
 
 ?>
 
-	<div class="wrapper" id="wrapper-dogs">
+	<div class="wrapper" id="wrapper-dogs-frontpage">
 
         <div class="container">
 
