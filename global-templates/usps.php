@@ -28,7 +28,7 @@ if ($usp->have_posts()) {
 
         <div class="container">
 
-            <div class="row justify-content-center mx-auto">
+            <div class="row justify-content-center">
 
                 <?php
 
