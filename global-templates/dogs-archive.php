@@ -1,6 +1,6 @@
 <?php
 /**
- * Dogs on frontpage setup.
+ * Dogs on archive setup.
  *
  * @package myportfolio
  */
@@ -20,7 +20,16 @@ $dog = new WP_Query([
     'posts_per_page' => $dog_amount,
 ]);
 
+$taxonomy = 'dog';
+$taxonomy_terms = get_terms($taxonomy, [
+    'hide_empty' => 0,
+    'fields' => 'ids'
+]);
+
+//var_dump($taxonomy_terms);
+
 if ($dog->have_posts()) {
+
 
 ?>
 
