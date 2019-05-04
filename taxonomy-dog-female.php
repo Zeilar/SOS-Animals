@@ -18,6 +18,7 @@ if (!$amount) {
 $dog = new WP_Query([
     'post_type' => 'sosa_dog',
     'posts_per_page' => $dog_amount,
+    'paged' =>  get_query_var( 'paged' ),
     'tax_query' => array(
 		array(
 			'taxonomy' => 'dog',
