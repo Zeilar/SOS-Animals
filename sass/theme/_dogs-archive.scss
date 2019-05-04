@@ -8,7 +8,19 @@
 
         .list-group-item {
 
-            background-color: #f9f9f9;
+            a {
+
+                color: white;
+
+                background-color: $indigo;
+
+                padding: 5px;
+            }
+
+            a:hover {
+
+                text-decoration: none;
+            }
         }
 
         .card-body {
@@ -17,14 +29,15 @@
 
             a:hover {
                 
-                color: $primary;
+                color: $secondary;
+
                 background-color: white;
             }
         }
 
         img {
 
-            height: 14rem;
+            height: 12rem;
         }
     }
 }

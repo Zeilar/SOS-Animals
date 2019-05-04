@@ -17,7 +17,6 @@ if (!$dog_amount) {
 
 $dog = new WP_Query([
     'post_type' => 'sosa_dog',
-    'posts_per_page' => $dog_amount,
     'paged' =>  get_query_var( 'paged' ),
 ]);
 
@@ -25,7 +24,7 @@ get_header();
 $container = get_theme_mod( 'myportfolio_container_type' );
 ?>
 
-<div class="wrapper" id="dog-archive-wrapper">
+<div class="wrapper" id="wrapper">
 
     <div class="<?php echo esc_attr( $container ); ?>" id="content">
 
@@ -43,7 +42,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
                         <div class="container">
 
-                        <h1 class="pl-3"><?php _e('Dogs', 'myportfolio'); ?></h1>
+                        <h1><?php _e('Dogs', 'myportfolio'); ?></h1>
 
                             <div class="row">
 
@@ -64,7 +63,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
                         <?php myportfolio_pagination(); ?>
 
-                    </div> <!-- wrapper -->
+                    </div> <!-- wrapper-archive-dogs -->
 
                 <?php } ?> <!-- if -->
 
@@ -76,6 +75,6 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 	</div> <!-- content -->
 
-</div> <!-- page-wrapper -->
+</div> <!-- wrapper -->
 
 <?php get_footer(); ?>

@@ -50,7 +50,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
                         <div class="container">
 
-                        <h1 class="pl-3"><?php _e('Dogs', 'myportfolio'); ?></h1>
+                        <h1><?php _e('Dogs: Female', 'myportfolio'); ?></h1>
 
                             <div class="row">
 

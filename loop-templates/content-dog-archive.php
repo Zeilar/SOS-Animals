@@ -9,7 +9,7 @@ foreach ($taxomonies as $taxonomy) {
 
 ?>
 
-<div class="col d-flex justify-content-center <?php echo lcfirst($sex); ?>">
+<div class="col-lg-4 d-flex justify-content-center <?php echo lcfirst($sex); ?>">
 
         <div class="card rounded-lg mt-4">
 
@@ -31,22 +31,20 @@ foreach ($taxomonies as $taxonomy) {
 
             <div class="card-body">
 
-                <h2 class="card-title"><?php the_title(); ?></h2>
-
-                <div class="card-text"><?php the_content(); ?></div>
+                <h2 class="card-title mb-0"><?php the_title(); ?></h2>
 
             </div>
 
 
             <ul class="list-group list-group-flush">
 
-                <li class="list-group-item"><a href="/dogs/female"><?php _e($sex, 'myportfolio') ?></a></li>
+                <li class="list-group-item"><a href="/dog/<?php echo lcfirst($sex); ?>"><?php _e($sex, 'myportfolio') ?><span class="pl-2 fa fa-tag"></span></a></li>
 
             </ul>
 
             <div class="card-body">
 
-                <a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e('Read More', 'myportfolio'); ?></a>
+                <a href="<?php the_permalink(); ?>" class="btn btn-secondary"><?php _e('Read More &raquo;', 'myportfolio'); ?></a>
 
             </div> <!-- card-body -->
 
