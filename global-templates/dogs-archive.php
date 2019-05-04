@@ -26,17 +26,16 @@ $taxonomy_terms = get_terms($taxonomy, [
     'hide_empty' => 0,
     'fields' => 'ids'
 ]);
-
+                 
 //var_dump($query);
 
 //var_dump($taxonomy_terms);
 
+wp_reset_postdata();
+
 if ($dog->have_posts()) {
 
 ?>
-
-<h1>Pagination:</h1>
-            <?php posts_nav_link(); ?>
 
 	<div class="wrapper" id="wrapper-archive-dogs">
 
@@ -58,6 +57,8 @@ if ($dog->have_posts()) {
             </div> <!-- row -->
 
         </div> <!-- container -->
+
+        <?php myportfolio_pagination(); ?>
 
 	</div> <!-- wrapper -->
 
