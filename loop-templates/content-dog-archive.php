@@ -9,7 +9,7 @@ foreach ($taxomonies as $taxonomy) {
 
 ?>
 
-<div class="col d-flex justify-content-center <?php echo $sex ?>">
+<div class="col d-flex justify-content-center <?php echo lcfirst($sex); ?>">
 
         <div class="card rounded-lg mt-4">
 

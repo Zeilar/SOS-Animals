@@ -20,13 +20,11 @@ $dog = new WP_Query([
     'posts_per_page' => $dog_amount,
 ]);
 
-
-
 get_header();
 $container = get_theme_mod( 'myportfolio_container_type' );
 ?>
 
-<div class="wrapper" id="page-wrapper">
+<div class="wrapper" id="dog-archive-wrapper">
 
     <div class="<?php echo esc_attr( $container ); ?>" id="content">
 
