@@ -22,8 +22,8 @@ if ( ! function_exists( 'myportfolio_pagination' ) ) {
 			array(
 				'mid_size'           => 2,
 				'prev_next'          => true,
-				'prev_text'          => __( '&laquo;', 'myportfolio' ),
-				'next_text'          => __( '&raquo;', 'myportfolio' ),
+				'prev_text'          => __( '&laquo; Newer', 'myportfolio' ),
+				'next_text'          => __( 'Older &raquo;', 'myportfolio' ),
 				'screen_reader_text' => __( 'Posts navigation', 'myportfolio' ),
 				'type'               => 'array',
 				'current'            => max( 1, get_query_var( 'paged' ) ),

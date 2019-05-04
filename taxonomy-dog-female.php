@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $dog_amount = get_field('amount_of_dogs_archive', 'option');
 
-if (!$amount) {
+if (!$dog_amount) {
     $dog_amount = 2;
 }
 
