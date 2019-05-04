@@ -40,7 +40,7 @@ foreach ($taxomonies as $taxonomy) {
 
             <ul class="list-group list-group-flush">
 
-                <li class="list-group-item"><?php _e($sex, 'myportfolio') ?></li>
+                <li class="list-group-item"><a href="/dogs/female"><?php _e($sex, 'myportfolio') ?></a></li>
 
             </ul>
 
