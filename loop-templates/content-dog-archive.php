@@ -1,4 +1,15 @@
-<div class="col d-flex justify-content-center">
+<?php 
+
+$taxomonies = get_the_terms(get_the_ID(), 'dog');
+
+foreach ($taxomonies as $taxonomy) {
+
+    $sex = $taxonomy->name;
+}
+
+?>
+
+<div class="col d-flex justify-content-center <?php echo $sex ?>">
 
         <div class="card rounded-lg mt-4">
 
@@ -29,7 +40,7 @@
 
             <ul class="list-group list-group-flush">
 
-                <li class="list-group-item">Kön</li>
+                <li class="list-group-item"><?php _e($sex, 'myportfolio') ?></li>
 
             </ul>
 
