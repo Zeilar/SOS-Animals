@@ -30,29 +30,28 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 							<h1 class="page-title"><?php esc_html_e( 'Oops 404', 'myportfolio' ); ?></h1>
 
-						</header><!-- .page-header -->
+						</header><!-- page-header -->
 
 						<div class="page-content">
 
-							<p>The page could not be found.</p>
+							<p><?php _e('The page could not be found.', 'myportfolio'); ?></p>
 
 								<div class="widget widget_categories">
 
+								</div> <!-- widget -->
 
-								</div><!-- .widget -->
+						</div> <!-- page-content -->
 
-						</div><!-- .page-content -->
+					</section> <!-- error-404 -->
 
-					</section><!-- .error-404 -->
+				</main> <!-- main -->
 
-				</main><!-- #main -->
+			</div> <!-- primary -->
 
-			</div><!-- #primary -->
+		</div> <!-- row -->
 
-		</div><!-- .row -->
+	</div> <!-- content -->
 
-	</div><!-- #content -->
-
-</div><!-- #error-404-wrapper -->
+</div> <!-- error-404-wrapper -->
 
 <?php get_footer(); ?>
