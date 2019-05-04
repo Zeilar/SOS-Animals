@@ -35,7 +35,7 @@ if ($dog->have_posts()) {
 
 ?>
 
-<h1>Pagination:</h1>
+<h1>archive-sosa_dog.php:</h1>
             <?php posts_nav_link(); ?>
 
 	<div class="wrapper" id="wrapper-archive-dogs">
