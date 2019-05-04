@@ -18,8 +18,9 @@ if (!$amount) {
 $dog = new WP_Query([
     'post_type' => 'sosa_dog',
     'posts_per_page' => $dog_amount,
-    'paged' => get_query_var('paged'),
 ]);
+
+
 
 get_header();
 $container = get_theme_mod( 'myportfolio_container_type' );

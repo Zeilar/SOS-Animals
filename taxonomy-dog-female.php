@@ -14,11 +14,24 @@ $dog_amount = get_field('amount_of_dogs_archive', 'option');
 if (!$amount) {
     $dog_amount = 6;
 }
+    
+
+global $wp;
+$current_slug = add_query_arg([], $wp->request );
+
+var_dump($current_slug);
 
 $dog = new WP_Query([
     'post_type' => 'sosa_dog',
     'posts_per_page' => $dog_amount,
-    'paged' => get_query_var('paged'),
+    'tax_query' => array(
+		array(
+			'taxonomy' => 'dog',
+			'field'    => 'slug',
+			'terms'    => 'female',
+		),
+	),
+    
 ]);
 
 get_header();
