@@ -1,6 +1,8 @@
 <?php
 /**
- * Dogs on archive setup.
+ * Template Name: Dog archive
+ *
+ * This template can be used to override the default template and sidebar setup
  *
  * @package myportfolio
  */
@@ -9,56 +11,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$dog_amount = get_field('amount_of_dogs_archive', 'option');
-
-if (!$amount) {
-    $dog_amount = 8;
-}
-
-$dog = new WP_Query([
-    'post_type' => 'sosa_dog',
-    'posts_per_page' => $dog_amount,
-    'paged' => get_query_var('paged'),
-]);
-
-$taxonomy = 'dog';
-$taxonomy_terms = get_terms($taxonomy, [
-    'hide_empty' => 0,
-    'fields' => 'ids'
-]);
-
-//var_dump($query);
-
-//var_dump($taxonomy_terms);
-
-if ($dog->have_posts()) {
-
+get_header();
+$container = get_theme_mod( 'myportfolio_container_type' );
 ?>
 
-<h1>archive-sosa_dog.php:</h1>
-            <?php posts_nav_link(); ?>
+<div class="wrapper" id="page-wrapper">
 
-	<div class="wrapper" id="wrapper-archive-dogs">
+	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 
-        <div class="container">
+		<div class="row justify-content-center">
 
-            <div class="row">
+			<div class="col-md col-lg-9 border content-area" id="primary">
 
-                <?php
-                    while ($dog->have_posts()) {
-                        
-                        $dog->the_post();
+				<main class="site-main" id="main" role="main">
 
-                        get_template_part('loop-templates/content', 'dog-archive');
-                    }
+					<?php while ( have_posts() ) : the_post(); ?>
 
-                    wp_reset_postdata(); // ALWAYS RESET POSTDATA
-                ?>
-                
-            </div> <!-- row -->
+					<?php endwhile; // end of the loop ?>
 
-        </div> <!-- container -->
+				</main> <!-- main -->
 
-	</div> <!-- wrapper -->
+				<?php get_template_part( 'global-templates/dogs', 'archive' ); ?> <!-- dogs - for frontpage only -->
 
-<?php } // end of if
+			</div> <!-- primary -->
+
+			<?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
+
+		</div> <!-- row -->
+
+	</div> <!-- content -->
+
+</div> <!-- page-wrapper -->
+
+<?php get_footer(); ?>
