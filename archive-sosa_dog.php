@@ -1,9 +1,7 @@
 <?php
 /**
- * Template Name: Dog archive
- *
- * This template can be used to override the default template and sidebar setup
- *
+ *  Archive for dogs
+ * 
  * @package myportfolio
  */
 
@@ -31,7 +29,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 				</main> <!-- main -->
 
-				<?php get_template_part( 'global-templates/dogs', 'archive' ); ?> <!-- dogs - for frontpage only -->
+				<?php get_template_part( 'global-templates/dogs', 'archive' ); ?> <!-- dogs - for archive page only -->
 
 			</div> <!-- primary -->
 
