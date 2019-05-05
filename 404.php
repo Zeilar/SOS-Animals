@@ -28,7 +28,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 						<h1 class="page-title"><?php esc_html_e( 'Oops 404', 'myportfolio' ); ?></h1>
 
-					</header><!-- page-header -->
+					</header> <!-- page-header -->
 
 					<div class="page-content">
 
