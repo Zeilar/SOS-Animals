@@ -4,21 +4,7 @@
 
         <div class="card rounded-lg mt-4">
 
-            <img class="card-image rounded-top" src="<?php 
-            
-            if (the_field('dog_thumbnail_frontpage_image')) {
-
-                the_field('dog_thumbnail_frontpage_image');
-            }
-
-            elseif (the_field('dog_thumbnail_frontpage_image_url')) {
-
-                the_field('dog_thumbnail_frontpage_image_url');
-            } 
-            
-            ?>" alt="<?php _e('Dog image', 'myportfoolio'); ?>">
-
-            <!-- End of card thumbnail -->
+            <img class="card-image rounded-top" src="<?php the_field('dog_image'); ?>">
 
             <div class="card-body">
 

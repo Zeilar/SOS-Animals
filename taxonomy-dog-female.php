@@ -12,12 +12,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 $dog_amount = get_field('amount_of_dogs_archive', 'option');
 
 if (!$dog_amount) {
-    $dog_amount = 2;
+    $dog_amount = 6;
 }
 
 $dog = new WP_Query([
     'post_type' => 'sosa_dog',
-    'posts_per_page' => $dog_amount,
     'paged' =>  get_query_var( 'paged' ),
     'tax_query' => array(
 		array(
@@ -38,7 +37,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 		<div class="row justify-content-center">
 
-			<div class="col-md col-lg-9 border content-area" id="primary">
+			<div class="col-md col-lg-9 content-area" id="primary">
 
                 <?php
 
@@ -46,7 +45,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
                 ?>
 
-                    <div class="wrapper" id="wrapper-archive-dogs">
+                    <div class="wrapper border" id="wrapper-archive-dogs">
 
                         <div class="container">
 

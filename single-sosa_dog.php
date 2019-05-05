@@ -1,6 +1,6 @@
 <?php
 /**
- *  Single dog template
+ *  Single page for dogs
  * 
  * @package myportfolio
  */
@@ -13,23 +13,44 @@ get_header();
 $container = get_theme_mod( 'myportfolio_container_type' );
 ?>
 
-<div class="wrapper" id="dog-wrapper">
+<div class="wrapper" id="taxonomy-female-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content">
+    <div class="container" id="content">
 
 		<div class="row justify-content-center">
 
-			<div class="col-md col-lg-9 border content-area" id="primary">
+			<div class="col-md col-lg-9 content-area" id="primary">
 
-				<main class="site-main" id="main" role="main">
+                <?php
 
-					<?php while ( have_posts() ) : the_post(); ?>
+                if (have_posts()) {
 
-					<?php endwhile; // end of the loop ?>
+                ?>
 
-				</main> <!-- main -->
+                    <div class="wrapper border" id="wrapper-archive-dogs">
 
-				<?php get_template_part( 'global-templates/dogs', 'single' ); ?> <!-- dog - for single page only -->
+                        <div class="container">
+
+                            <div class="row">
+
+                                <?php
+                                    while (have_posts()) {
+                                        
+										the_post();
+										
+                                        get_template_part('global-templates/dogs', 'single');
+                                    }
+
+                                    wp_reset_postdata(); // ALWAYS RESET POSTDATA
+                                ?>
+                                
+                            </div> <!-- row -->
+
+                        </div> <!-- container -->						
+
+                    </div> <!-- wrapper -->
+
+                <?php } ?> <!-- if -->
 
 			</div> <!-- primary -->
 

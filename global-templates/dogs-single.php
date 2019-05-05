@@ -1,39 +1,5 @@
-<?php
-/**
- * Dogs on frontpage setup.
- *
- * @package myportfolio
- */
+<div class="col">
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+    <h1>Hello, I am: <?php the_title(); ?></h1>
 
-//if ($dog->have_posts()) {
-
-?>
-
-	<div class="wrapper" id="wrapper-dogs-frontpage">
-
-        <div class="container">
-
-            <div class="row">
-
-                <?php
-                    while (have_posts()) {
-                        
-                        the_post();
-
-                        get_template_part('loop-templates/content', 'dog-single');
-                    }
-
-                    wp_reset_postdata(); // ALWAYS RESET POSTDATA
-                ?>
-                
-            </div> <!-- row -->
-
-        </div> <!-- container -->
-
-	</div> <!-- wrapper -->
-
-<?php //} // end of if
+</div>

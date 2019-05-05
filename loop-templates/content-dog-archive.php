@@ -13,26 +13,12 @@ foreach ($taxomonies as $taxonomy) {
 
     <div class="card rounded-lg mt-4">
 
-        <img class="card-image rounded-top" src="<?php 
-            
-        if (the_field('dog_thumbnail_frontpage_image')) {
-
-            the_field('dog_thumbnail_frontpage_image');
-        }
-
-        elseif (the_field('dog_thumbnail_frontpage_image_url')) {
-
-            the_field('dog_thumbnail_frontpage_image_url');
-        } 
-            
-        ?>" alt="<?php _e('Dog image', 'myportfoolio'); ?>">
-
-        <!-- end of img -->
+        <img class="card-image rounded-top" src="<?php the_field('dog_image'); ?>" alt="<?php _e('Dog image', 'myportfolio'); ?>">
 
         <div class="card-body">
 
             <h3 class="card-title mb-0"><?php the_title(); ?></h3>
-
+            
         </div> <!-- card-body -->
 
         <ul class="list-group list-group-flush">
