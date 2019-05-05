@@ -22,29 +22,25 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 			<div class="col-md-12 content-area" id="primary">
 
-				<main class="site-main" id="main">
+				<section class="error-404 not-found">
 
-					<section class="error-404 not-found">
+					<header class="page-header">
 
-						<header class="page-header">
+						<h1 class="page-title"><?php esc_html_e( 'Oops 404', 'myportfolio' ); ?></h1>
 
-							<h1 class="page-title"><?php esc_html_e( 'Oops 404', 'myportfolio' ); ?></h1>
+					</header><!-- page-header -->
 
-						</header><!-- page-header -->
+					<div class="page-content">
 
-						<div class="page-content">
+						<p><?php _e('The page could not be found.', 'myportfolio'); ?></p>
 
-							<p><?php _e('The page could not be found.', 'myportfolio'); ?></p>
+						<div class="widget widget_categories">
 
-								<div class="widget widget_categories">
+						</div> <!-- widget -->
 
-								</div> <!-- widget -->
+					</div> <!-- page-content -->
 
-						</div> <!-- page-content -->
-
-					</section> <!-- error-404 -->
-
-				</main> <!-- main -->
+				</section> <!-- error-404 -->
 
 			</div> <!-- primary -->
 
