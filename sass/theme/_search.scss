@@ -1,6 +1,6 @@
-.post {
+article {
 
-    .entry-content {
+    .entry-summary {
 
         a:hover {
 
@@ -28,12 +28,13 @@
 
             background-color: $gray-300;
 
-            a:hover {
+        }
 
-                text-decoration: none;
+        a:hover {
 
-                color: #c69e25;
-            }
+            text-decoration: none;
+
+            color: #c69e25;
         }
     }
 }

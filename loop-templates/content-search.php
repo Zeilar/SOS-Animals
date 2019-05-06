@@ -41,10 +41,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</div> <!-- entry-summary -->
 
+	<?php if (myportfolio_entry_footer()) { ?>
+
 	<footer class="entry-footer">
 
 		<?php myportfolio_entry_footer(); ?>
 
 	</footer> <!-- entry-footer -->
+
+	<?php } ?>
 
 </article> <!-- post-## -->
