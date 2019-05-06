@@ -63,7 +63,7 @@ if ( ! function_exists( 'myportfolio_bootstrap_comment_form' ) ) {
 	    <label for="comment">' . _x( 'Comment', 'noun', 'myportfolio' ) . ( ' <span class="required">*</span>' ) . '</label>
 	    <textarea class="form-control" id="comment" name="comment" aria-required="true" cols="45" rows="8"></textarea>
 	    </div>';
-		$args['class_submit']  = 'btn btn-secondary'; // since WP 4.1.
+		$args['class_submit']  = 'btn btn-primary'; // since WP 4.1.
 		return $args;
 	}
 } // endif function_exists( 'myportfolio_bootstrap_comment_form' )

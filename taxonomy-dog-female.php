@@ -35,7 +35,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
     <div class="container" id="content">
 
-		<div class="row justify-content-center">
+		<div class="row">
 
 			<div class="col-md col-lg-9 content-area" id="primary">
 

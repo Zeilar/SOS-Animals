@@ -44,7 +44,7 @@ $taxomonies = get_the_terms(get_the_ID(), 'dog');
 
         <div class="card-body">
 
-            <a href="<?php the_permalink(); ?>" class="btn btn-secondary"><?php _e('Read More &raquo;', 'myportfolio'); ?></a>
+            <a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e('Read More &raquo;', 'myportfolio'); ?></a>
 
         </div> <!-- card-body -->
 
