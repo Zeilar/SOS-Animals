@@ -13,53 +13,19 @@ get_header();
 $container = get_theme_mod( 'myportfolio_container_type' );
 ?>
 
-<div class="wrapper" id="taxonomy-female-wrapper">
+<div class="wrapper" id="wrapper-dog-single">
 
-    <div class="container" id="content">
+    <?php
+        while (have_posts()) {
+            
+            the_post();
+            
+            get_template_part('global-templates/dogs', 'single');
+        }
 
-		<div class="row justify-content-center">
+        wp_reset_postdata(); // ALWAYS RESET POSTDATA
+    ?>
 
-			<div class="col-md col-lg-9 content-area" id="primary">
-
-                <?php
-
-                if (have_posts()) {
-
-                ?>
-
-                    <div class="wrapper border" id="wrapper-archive-dogs">
-
-                        <div class="container">
-
-                            <div class="row">
-
-                                <?php
-                                    while (have_posts()) {
-                                        
-										the_post();
-										
-                                        get_template_part('global-templates/dogs', 'single');
-                                    }
-
-                                    wp_reset_postdata(); // ALWAYS RESET POSTDATA
-                                ?>
-                                
-                            </div> <!-- row -->
-
-                        </div> <!-- container -->						
-
-                    </div> <!-- wrapper -->
-
-                <?php } ?> <!-- if -->
-
-			</div> <!-- primary -->
-
-			<?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
-
-		</div> <!-- row -->
-
-	</div> <!-- content -->
-
-</div> <!-- page-wrapper -->
+</div> <!-- wrapper-dpg-single -->
 
 <?php get_footer(); ?>

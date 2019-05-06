@@ -13,13 +13,13 @@ $taxomonies = get_the_terms(get_the_ID(), 'dog');
 
     ?>">
 
-    <div class="card rounded-lg mt-4">
+    <article class="card rounded-lg mt-4">
 
         <img class="card-image rounded-top" src="<?php the_field('dog_image'); ?>" alt="<?php _e('Dog image', 'myportfolio'); ?>">
 
         <div class="card-body">
 
-        <h2 class="card-title mb-0"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <h2 class="card-title mb-0"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             
         </div> <!-- card-body -->
 
@@ -48,6 +48,6 @@ $taxomonies = get_the_terms(get_the_ID(), 'dog');
 
         </div> <!-- card-body -->
 
-    </div> <!-- card -->
+    </article> <!-- card -->
     
 </div> <!-- col -->

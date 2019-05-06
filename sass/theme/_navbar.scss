@@ -1,14 +1,17 @@
-nav a {
+#wrapper-navbar {
 
-    color: white;
-}
+    nav a {
 
-.nav-link:hover {
+        color: white;
+    }
 
-    color: black;
-}
+    .nav-link:hover {
 
-.navbar-brand:hover  {
+        color: black;
+    }
 
-    color:white;
+    .navbar-brand:hover  {
+
+        color:white;
+    }
 }
