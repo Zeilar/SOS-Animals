@@ -4,7 +4,7 @@ $taxomonies = get_the_terms(get_the_ID(), 'dog');
 
 ?>
 
-<div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-center <?php
+<div class="col-lg-4 col-md-6 d-flex justify-content-center <?php
 
     foreach ($taxomonies as $taxonomy) {
 
@@ -13,7 +13,7 @@ $taxomonies = get_the_terms(get_the_ID(), 'dog');
 
     ?>">
 
-    <article class="card rounded-lg mt-4">
+    <article class="card rounded-lg mt-2">
 
         <img class="card-image rounded-top" src="<?php the_field('dog_image'); ?>" alt="<?php _e('Dog image', 'myportfolio'); ?>">
 
