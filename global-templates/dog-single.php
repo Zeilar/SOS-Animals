@@ -14,7 +14,7 @@
                     
                     <?php the_content(); ?>
 
-                </div>
+                </div> <!-- dog-single-content -->
 
                 <footer class="entry-footer">
 
