@@ -33,32 +33,36 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 			<div class="col-md col-lg-9 content-area" id="primary">
 
-                <?php
-
-                if (have_posts()) {
-
-                ?>
-
                     <h1 class="border-bottom pb-2"><?php _e('Dogs', 'myportfolio'); ?></h1>
 
                         <div class="row">
 
                             <?php
+
+                            if (have_posts()) :
+
+                            ?>
+
+                            <?php    
                                 while (have_posts()) {
                                     
                                    the_post();
 
                                     get_template_part('loop-templates/content', 'dog-archive');
                                 }
-
-                                wp_reset_postdata(); // ALWAYS RESET POSTDATA
                             ?>
+
+                            <?php wp_reset_postdata(); ?>  // ALWAYS RESET POSTDAT
+
+                            <?php else : ?>
+
+                                <?php get_template_part('loop-templates/content', 'none'); ?>
+
+                            <?php endif; ?>
                             
                         </div> <!-- row -->
 
                     <?php myportfolio_pagination(); ?>
-
-                <?php } ?> <!-- if -->
 
 			</div> <!-- primary -->
 
