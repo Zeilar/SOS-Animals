@@ -33,7 +33,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 			<div class="col-md col-lg-9 content-area" id="primary">
 
-                    <h1 class="border-bottom pb-2"><?php _e('Dogs', 'myportfolio'); ?></h1>
+                    <h1 class="border px-2 pt-2 pb-2 mb-0"><span class="align-text-top"><?php _e('Dogs', 'myportfolio'); ?></span></h1>
 
                         <div class="row">
 

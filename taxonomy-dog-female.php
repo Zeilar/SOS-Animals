@@ -41,24 +41,28 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
                 <?php if ($dog->have_posts()) { ?>
 
-                    <h1 class="border-bottom pb-2"><?php _e('Dogs: Female', 'myportfolio'); ?></h1>
+                    <h1 class="border px-2 pt-2 pb-2 mb-0">
 
-                        <div class="row">
+                        <span class="align-text-top"><?php _e('Dogs: Female', 'myportfolio'); ?></span>
+                        
+                    </h1>
 
-                            <?php
+                    <div class="row">
 
-                                while ($dog->have_posts()) {
-                                    
-                                    $dog->the_post();
+                        <?php
 
-                                    get_template_part('loop-templates/content', 'dog-archive');
-                                }
-
-                                wp_reset_postdata(); // ALWAYS RESET POSTDATA
+                            while ($dog->have_posts()) {
                                 
-                            ?>
+                                $dog->the_post();
+
+                                get_template_part('loop-templates/content', 'dog-archive');
+                            }
+
+                            wp_reset_postdata(); // ALWAYS RESET POSTDATA
                             
-                        </div> <!-- row -->
+                        ?>
+                        
+                    </div> <!-- row -->
 
                     <?php myportfolio_pagination(); ?>
 
