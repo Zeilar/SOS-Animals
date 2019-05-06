@@ -9,6 +9,12 @@
                 <h1 class="text-center border-bottom pb-2 pt-2"><?php the_title(); ?></h1>
                 
                 <img class="img-fluid dog-image mx-auto mb-3 mt-3 d-block" src="<?php the_field('dog_image'); ?>" alt="<?php _e('Dog image', 'myportfolio'); ?>">
+                
+                <div class="dog-single-content">
+                    
+                    <?php the_content(); ?>
+
+                </div>
 
                 <footer class="entry-footer">
 
