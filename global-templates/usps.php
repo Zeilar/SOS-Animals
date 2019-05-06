@@ -40,7 +40,7 @@ if ($usp->have_posts()) {
                     }
 
                     wp_reset_postdata(); // ALWAYS RESET POSTDATA
-
+                    
                 ?>
                 
             </div> <!-- row -->

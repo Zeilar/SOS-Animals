@@ -31,6 +31,7 @@ if ($dog->have_posts()) {
             <div class="row">
 
                 <?php
+
                     while ($dog->have_posts()) {
                         
                         $dog->the_post();
@@ -39,6 +40,7 @@ if ($dog->have_posts()) {
                     }
 
                     wp_reset_postdata(); // ALWAYS RESET POSTDATA
+                    
                 ?>
                 
             </div> <!-- row -->

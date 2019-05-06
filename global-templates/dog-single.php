@@ -20,13 +20,13 @@
 
                             <p class="text-center dog-age border-right mb-0 px-3 pt-3 pb-3">Age</p>
 
-                        </div>
+                        </div> <!-- append-area -->
                         
                         <div class="field-area">
 
                             <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php the_field('dog_age'); ?></p>
 
-                        </div>
+                        </div> <!-- field-area -->
 
                     </li> <!-- list-group-item -->
 
@@ -36,13 +36,13 @@
 
                             <p class="text-center dog-withers border-right mb-0 px-3 pt-3 pb-3"><?php _e('Withers', 'myportfolio'); ?></p>
 
-                        </div>
+                        </div> <!-- append-area -->
                         
                         <div class="field-area">
 
                             <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php the_field('dog_withers'); ?></p>
 
-                        </div>
+                        </div> <!-- field-area -->
 
                     </li> <!-- list-group-item -->
 
@@ -52,13 +52,13 @@
 
                             <p class="text-center dog-weight border-right mb-0 px-3 pt-3 pb-3"><?php _e('Weight', 'myportfolio'); ?></p>
 
-                        </div>
+                        </div> <!-- append-area -->
                         
                         <div class="field-area">
 
                             <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php the_field('dog_weight'); ?></p>
 
-                        </div>
+                        </div> <!-- field-area -->
 
                     </li> <!-- list-group-item -->
 
@@ -74,19 +74,19 @@
 
                             <p class="text-center dog-age border-right mb-0 px-3 pt-3 pb-3"><?php _e('Adopted', 'myportfolio'); ?></p>
 
-                        </div>
+                        </div> <!-- append-area -->
                         
                         <div class="field-area">
 
                             <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php echo the_field('dog_adoption_date'); ?></p>
 
-                        </div>
+                        </div> <!-- field-area -->
 
                     </li> <!-- list-group-item -->
 
                 </ul> <!-- list-group -->
     
-            </article>
+            </article> <!-- border -->
 
         </div> <!-- primary -->
 

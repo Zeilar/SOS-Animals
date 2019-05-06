@@ -16,6 +16,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 <div class="wrapper" id="wrapper-dog-single">
 
     <?php
+    
         while (have_posts()) {
             
             the_post();
@@ -24,6 +25,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
         }
 
         wp_reset_postdata(); // ALWAYS RESET POSTDATA
+
     ?>
 
 </div> <!-- wrapper-dog-single -->

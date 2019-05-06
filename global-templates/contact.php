@@ -23,6 +23,7 @@ if ($contact->have_posts()) {
         <div class="container">
 
             <?php
+
                 while ($contact->have_posts()) {
                         
                     $contact->the_post();
@@ -31,6 +32,7 @@ if ($contact->have_posts()) {
                 }
 
                 wp_reset_postdata(); // ALWAYS RESET POSTDATA
+                
             ?>
 
         </div> <!-- container -->

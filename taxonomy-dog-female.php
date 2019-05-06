@@ -46,6 +46,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
                         <div class="row">
 
                             <?php
+
                                 while ($dog->have_posts()) {
                                     
                                     $dog->the_post();
@@ -54,6 +55,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
                                 }
 
                                 wp_reset_postdata(); // ALWAYS RESET POSTDATA
+                                
                             ?>
                             
                         </div> <!-- row -->

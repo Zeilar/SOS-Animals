@@ -48,7 +48,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
                                 }
                             ?>
 
-                            <?php wp_reset_postdata(); ?>  // ALWAYS RESET POSTDAT
+                            <?php wp_reset_postdata();  // ALWAYS RESET POSTDATA ?>
 
                             <?php else : ?>
 

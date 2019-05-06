@@ -4,7 +4,7 @@ $taxomonies = get_the_terms(get_the_ID(), 'dog');
 
 ?>
 
-<div class="col-lg-4 mb-4 d-flex justify-content-center <?php
+<div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-center <?php
 
     foreach ($taxomonies as $taxonomy) {
 
