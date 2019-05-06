@@ -1,9 +1,14 @@
 #wrapper-footer-full {
 
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    /* If you want floating fixed footer at bottom
+     *
+     * position: fixed;
+     * bottom: 0;
+     * left: 0;
+     * right: 0;
+     * 
+     */
+    
 
     background-color: $danger;
 
