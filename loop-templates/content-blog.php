@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-	<div class="entry-content pl-1 pr-1 pt-3">
+	<div class="entry-content pl-1 pr-1 pt-1">
 
 		<?php the_excerpt(); ?>
 
