@@ -16,8 +16,6 @@ get_header();
 $container = get_theme_mod( 'myportfolio_container_type' );
 ?>
 
-<h1>Archive.php</h1>
-
 <div class="wrapper" id="archive-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">

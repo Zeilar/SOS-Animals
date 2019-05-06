@@ -2,8 +2,6 @@
 /**
  * The template for displaying the author pages.
  *
- * Learn more: https://codex.wordpress.org/Author_Templates
- *
  * @package myportfolio
  */
 
@@ -21,25 +19,22 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 		<div class="row">
 
-			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main" id="main">
-
-				<header class="page-header author-header">
+				<header class="page-header border author-header mb-2">
 
 					<?php
-					if ( isset( $_GET['author_name'] ) ) {
-						$curauth = get_user_by( 'slug', $author_name );
-					} else {
-						$curauth = get_userdata( intval( $author ) );
-					}
+						if ( isset( $_GET['author_name'] ) ) {
+							$curauth = get_user_by( 'slug', $author_name );
+						} else {
+							$curauth = get_userdata( intval( $author ) );
+						}
 					?>
 
-					<h1><?php echo esc_html__( 'About:', 'myportfolio' ) . ' ' . esc_html( $curauth->nickname ); ?></h1>
+					<h2 class="pl-1"><?php echo $curauth->nickname ?></h2>
 
 					<?php if ( ! empty( $curauth->ID ) ) : ?>
-						<?php echo get_avatar( $curauth->ID ); ?>
+						<?php echo get_avatar($curauth->ID, $size, $default, __('Avatar', 'myportfolio'), ['class' => 'pl-1 pb-1']); ?>
 					<?php endif; ?>
 
 					<?php if ( ! empty( $curauth->user_url ) || ! empty( $curauth->user_description ) ) : ?>
@@ -58,52 +53,30 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 						</dl>
 					<?php endif; ?>
 
-					<h2><?php echo esc_html( 'Posts by', 'myportfolio' ) . ' ' . esc_html( $curauth->nickname ); ?>:</h2>
+				</header> <!-- page-header -->
 
-				</header><!-- .page-header -->
+				<?php if ( have_posts() ) : ?>
 
-				<ul>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-					<!-- The Loop -->
-					<?php if ( have_posts() ) : ?>
-						<?php while ( have_posts() ) : the_post(); ?>
-							<li>
-								<?php
-								printf(
-									'<a rel="bookmark" href="%1$s" title="%2$s %3$s">%3$s</a>',
-									esc_url( apply_filters( 'the_permalink', get_permalink( $post ), $post ) ),
-									esc_attr( __( 'Permanent Link:', 'myportfolio' ) ),
-									the_title( '', '', false )
-								);
-								?>
-								<?php myportfolio_posted_on(); ?>
-								<?php esc_html_e( 'in', 'myportfolio' ); ?>
-								<?php the_category( '&' ); ?>
-							</li>
-						<?php endwhile; ?>
+						<?php get_template_part( 'loop-templates/content-author-posts' ); ?>
+						
+					<?php endwhile; ?>
 
-					<?php else : ?>
+				<?php else : ?>
 
-						<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
-					<?php endif; ?>
+				<?php endif; ?>
 
-					<!-- End Loop -->
-
-				</ul>
-
-			</main><!-- #main -->
-
-			<!-- The pagination component -->
 			<?php myportfolio_pagination(); ?>
 
-			<!-- Do the right sidebar check -->
 			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
-		</div> <!-- .row -->
+		</div> <!-- row -->
 
-	</div><!-- #content -->
+	</div> <!-- content -->
 
-</div><!-- #author-wrapper -->
+</div> <!-- author-wrapper -->
 
 <?php get_footer(); ?>

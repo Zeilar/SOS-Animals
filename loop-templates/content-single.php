@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title pl-1 pr-1">', '</h1>' ); ?>
+		<?php the_title( '<h2 class="entry-title pl-1 pr-1">', '</h2>' ); ?>
 
 		<div class="entry-meta text-muted pl-1 pr-1">
 

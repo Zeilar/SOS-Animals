@@ -1,15 +1,3 @@
-<?php
-/**
- * Single post partial template.
- *
- * @package myportfolio
- */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
-?>
-
 <article <?php post_class('border mb-4'); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
@@ -24,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</header> <!-- entry-header -->
 
-	<?php echo get_the_post_thumbnail($post->ID, 'large', ['class' => 'pl-1 pt-1']); ?>
+	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 	<div class="entry-content pl-1 pr-1 pt-1">
 
