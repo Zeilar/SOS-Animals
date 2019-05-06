@@ -1,6 +1,6 @@
 <?php
 /**
- *  Archive for dogs
+ *  Archive for dog taxonomy
  * 
  * @package myportfolio
  */

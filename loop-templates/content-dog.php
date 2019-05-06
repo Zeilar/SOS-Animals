@@ -8,7 +8,7 @@
 
             <div class="card-body">
 
-                <h2 class="card-title"><?php the_title(); ?></h2>
+            <h2 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
                 <?php the_content(); ?>
 

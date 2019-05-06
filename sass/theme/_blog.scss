@@ -1,30 +1,18 @@
-.post {
+#blog-wrapper {
 
-    .entry-content {
+    .post {
 
-        a:hover {
+        .entry-content {
 
-            background-color: white;
+            a:hover {
 
-            color: $primary;
+                background-color: white;
+
+                color: $primary;
+            }
         }
-    }
 
-    .entry-footer {
-
-        background-color: $gray-300;
-
-        a:hover {
-
-            text-decoration: none;
-
-            color: #c69e25
-        }
-    }
-
-    .entry-header {
-
-        .entry-meta {
+        .entry-footer {
 
             background-color: $gray-300;
 
@@ -32,7 +20,22 @@
 
                 text-decoration: none;
 
-                color: #c69e25;
+                color: #c69e25
+            }
+        }
+
+        .entry-header {
+
+            .entry-meta {
+
+                background-color: $gray-300;
+
+                a:hover {
+
+                    text-decoration: none;
+
+                    color: #c69e25;
+                }
             }
         }
     }

@@ -8,13 +8,14 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
 ?>
 
 <article <?php post_class('border mb-4'); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
 
-		<?php the_title( '<h2 class="entry-title pl-1 pr-1">', '</h2>' ); ?>
+		<h2 class="entry-title pl-1 pr-1"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
 		<div class="entry-meta text-muted pl-1 pr-1">
 

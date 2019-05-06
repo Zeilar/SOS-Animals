@@ -19,7 +19,7 @@ $taxomonies = get_the_terms(get_the_ID(), 'dog');
 
         <div class="card-body">
 
-            <h3 class="card-title mb-0"><?php the_title(); ?></h3>
+        <h2 class="card-title mb-0"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             
         </div> <!-- card-body -->
 
