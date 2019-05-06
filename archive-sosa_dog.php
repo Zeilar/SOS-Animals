@@ -37,11 +37,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
                         <div class="row">
 
-                            <?php
-
-                            if (have_posts()) :
-
-                            ?>
+                            <?php if (have_posts()) : ?>
 
                             <?php    
                                 while (have_posts()) {

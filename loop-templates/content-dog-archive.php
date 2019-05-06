@@ -24,7 +24,6 @@ $taxomonies = get_the_terms(get_the_ID(), 'dog');
         </div> <!-- card-body -->
 
         <ul class="list-group list-group-flush">
-
             
             <li class="list-group-item">
                 

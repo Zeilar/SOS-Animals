@@ -39,11 +39,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 			<div class="col-md col-lg-9 content-area" id="primary">
 
-                <?php
-
-                if ($dog->have_posts()) {
-
-                ?>
+                <?php if ($dog->have_posts()) { ?>
 
                     <h1 class="border-bottom pb-2"><?php _e('Dogs: Female', 'myportfolio'); ?></h1>
 
