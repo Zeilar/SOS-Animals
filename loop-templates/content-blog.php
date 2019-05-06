@@ -28,16 +28,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="entry-content pl-1 pr-1 pt-1">
 
-		<?php the_excerpt(); ?>
+        <?php the_excerpt(); ?>
+        
+        <div class="categories pl-1 pr-1">
 
-		<?php
-            wp_link_pages(
-                array(
-                    'before' => '<div class="page-links">' . __( 'Pages:', 'myportfolio' ),
-                    'after'  => '</div>',
-                )
-            );
-		?>
+        </div>
+
+        <div class="tags pl-1 pr-1">
+
+        </div>
 
 	</div> <!-- entry-content -->
 

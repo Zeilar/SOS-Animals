@@ -24,7 +24,7 @@ get_header();
 $container = get_theme_mod( 'myportfolio_container_type' );
 ?>
 
-<div class="wrapper" id="wrapper">
+<div class="wrapper" id="wrapper-archive-dogs">
 
     <div class="<?php echo esc_attr( $container ); ?>" id="content">
 
@@ -38,32 +38,24 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
                 ?>
 
-                    <div class="wrapper border" id="wrapper-archive-dogs">
+                    <h1 class="border-bottom pb-2"><?php _e('Dogs', 'myportfolio'); ?></h1>
 
-                        <div class="container">
+                        <div class="row">
 
-                        <h1><?php _e('Dogs', 'myportfolio'); ?></h1>
+                            <?php
+                                while ($dog->have_posts()) {
+                                    
+                                    $dog->the_post();
 
-                            <div class="row">
+                                    get_template_part('loop-templates/content', 'dog-archive');
+                                }
 
-                                <?php
-                                    while ($dog->have_posts()) {
-                                        
-                                        $dog->the_post();
+                                wp_reset_postdata(); // ALWAYS RESET POSTDATA
+                            ?>
+                            
+                        </div> <!-- row -->
 
-                                        get_template_part('loop-templates/content', 'dog-archive');
-                                    }
-
-                                    wp_reset_postdata(); // ALWAYS RESET POSTDATA
-                                ?>
-                                
-                            </div> <!-- row -->
-
-                        </div> <!-- container -->
-
-                        <?php myportfolio_pagination(); ?>
-
-                    </div> <!-- wrapper-archive-dogs -->
+                    <?php myportfolio_pagination(); ?>
 
                 <?php } ?> <!-- if -->
 
