@@ -29,6 +29,6 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 		</div>
 
-	</div><!-- #wrapper-footer-full -->
+	</div> <!-- wrapper-footer-full -->
 
 <?php endif; ?>

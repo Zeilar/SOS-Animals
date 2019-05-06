@@ -24,4 +24,4 @@ $sidebar_pos = get_theme_mod( 'myportfolio_sidebar_position' );
 <?php endif; ?>
 <?php dynamic_sidebar( 'right-sidebar' ); ?>
 
-</div><!-- #right-sidebar -->
+</div> <!-- right-sidebar -->

@@ -13,7 +13,7 @@ get_header();
 $container = get_theme_mod( 'myportfolio_container_type' );
 ?>
 
-<div class="wrapper" id="single-wrapper">
+<div class="wrapper" id="blog-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
@@ -23,7 +23,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
+					<?php get_template_part( 'loop-templates/content', 'blog' ); ?>
 
 					<?php myportfolio_post_nav(); ?>
 

@@ -101,7 +101,7 @@ if ( ! function_exists( 'myportfolio_widgets_init' ) ) {
 				'name'          => __( 'Right Sidebar', 'myportfolio' ),
 				'id'            => 'right-sidebar',
 				'description'   => __( 'Right sidebar widget area', 'myportfolio' ),
-				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'before_widget' => '<aside class="pb-2 pt-2 border-bottom" id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',

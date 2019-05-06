@@ -17,9 +17,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! function_exists( 'myportfolio_posted_on' ) ) {
 	function myportfolio_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+		/*if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s"> (%4$s) </time>';
-		}
+		}*/
 		$time_string = sprintf( $time_string,
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() ),
@@ -68,9 +68,9 @@ if ( ! function_exists( 'myportfolio_entry_footer' ) ) {
 			}
 		}
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
+			/*echo '<span class="comments-link">';
 			comments_popup_link( esc_html__( 'Leave a comment', 'myportfolio' ), esc_html__( '1 Comment', 'myportfolio' ), esc_html__( '% Comments', 'myportfolio' ) );
-			echo '</span>';
+			echo '</span>';*/
 		}
 		edit_post_link(
 			sprintf(
