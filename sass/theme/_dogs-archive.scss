@@ -29,6 +29,16 @@
 
             background-color: #f9f9f9;
 
+            .card-title {
+
+                a:hover {
+
+                    text-decoration: none;
+    
+                    color: #c69e25
+                }
+            }
+
             a:hover {
                 
                 color: $secondary;
