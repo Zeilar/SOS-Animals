@@ -29,6 +29,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			</div> <!-- entry-meta -->
 
+			<?php echo get_the_post_thumbnail($post->ID, 'large', ['class' => 'pl-1 pt-1']); ?>
+
 		<?php endif; ?>
 
 	</header> <!-- entry-header -->
