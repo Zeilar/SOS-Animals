@@ -20,7 +20,7 @@
 
                 <ul class="list-group list-group-flush border-top">
 
-                <li class="list-group-item px-0 pt-0 pb-0 d-flex flex-row">
+                    <li class="list-group-item px-0 pt-0 pb-0 d-flex flex-row">
 
                         <div class="append-area">
 
