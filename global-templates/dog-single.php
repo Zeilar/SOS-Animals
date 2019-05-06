@@ -30,7 +30,7 @@
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php __(the_field('dog_sex'), 'myportfolio'); ?></p>
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php _e(ucfirst(get_field('dog_sex')), 'myportfolio'); ?></p>
 
                         </div> <!-- field-area -->
 
@@ -46,7 +46,7 @@
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php __(the_field('dog_age'), 'myportfolio'); ?></p>
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php _e(strtolower(the_field('dog_age')), 'myportfolio'); ?></p>
 
                         </div> <!-- field-area -->
 
@@ -62,7 +62,7 @@
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php __(the_field('dog_withers'), 'myportfolio'); ?></p>
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php _e(strtolower(get_field('dog_withers')), 'myportfolio'); ?></p>
 
                         </div> <!-- field-area -->
 
@@ -78,7 +78,7 @@
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php __(the_field('dog_weight'), 'myportfolio'); ?></p>
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php _e(strtolower(get_field('dog_weight')), 'myportfolio'); ?></p>
 
                         </div> <!-- field-area -->
 
@@ -100,7 +100,7 @@
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php __(the_field('dog_adoption_date'), 'myportfolio'); ?></p>
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php _e(ucfirst(get_field('dog_adoption_date')), 'myportfolio'); ?></p>
 
                         </div> <!-- field-area -->
 
