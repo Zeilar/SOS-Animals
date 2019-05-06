@@ -1,14 +1,28 @@
 .post {
 
+    .entry-footer {
+
+        background-color: $gray-300;
+
+        a:hover {
+
+            text-decoration: none;
+
+            color: #c69e25
+        }
+    }
+
     .entry-header {
 
         .entry-meta {
 
             background-color: $gray-300;
 
-            :hover {
+            a:hover {
 
                 text-decoration: none;
+
+                color: #c69e25;
             }
         }
     }

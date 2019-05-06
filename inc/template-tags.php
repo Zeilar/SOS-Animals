@@ -58,13 +58,13 @@ if ( ! function_exists( 'myportfolio_entry_footer' ) ) {
 			$categories_list = get_the_category_list( esc_html__( ', ', 'myportfolio' ) );
 			if ( $categories_list && myportfolio_categorized_blog() ) {
 				/* translators: %s: Categories of current post */
-				printf( '<span class="cat-links pl-1 pr-1 text-muted">' . esc_html__( 'Posted in %s', 'myportfolio' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<p class="cat-links pl-1 pr-1 mb-0 text-muted">' . esc_html__( 'Posted in: %s', 'myportfolio' ) . '</p>', $categories_list ); // WPCS: XSS OK.
 			}
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'myportfolio' ) );
 			if ( $tags_list ) {
 				/* translators: %s: Tags of current post */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %s', 'myportfolio' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<p class="tags-links pl-1 pr-1 mb-0 text-muted">' . esc_html__( 'Tagged: %s', 'myportfolio' ) . '</p>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
