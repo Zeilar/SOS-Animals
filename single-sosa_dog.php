@@ -20,12 +20,12 @@ $container = get_theme_mod( 'myportfolio_container_type' );
             
             the_post();
             
-            get_template_part('global-templates/dogs', 'single');
+            get_template_part('global-templates/dog', 'single');
         }
 
         wp_reset_postdata(); // ALWAYS RESET POSTDATA
     ?>
 
-</div> <!-- wrapper-dpg-single -->
+</div> <!-- wrapper-dog-single -->
 
 <?php get_footer(); ?>
