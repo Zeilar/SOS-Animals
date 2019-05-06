@@ -17,7 +17,8 @@ if (!$dog_amount) {
 
 $dog = new WP_Query([
     'post_type' => 'sosa_dog',
-    'paged' => get_query_var( 'paged')
+    'posts_per_page' => $dog_amount,
+    'paged' => (get_query_var( 'paged')) ? get_query_var( 'paged') : 1
 ]);
 
 get_header();
@@ -34,7 +35,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
                 <?php
 
-                if ($dog->have_posts()) {
+                if (have_posts()) {
 
                 ?>
 
@@ -43,9 +44,9 @@ $container = get_theme_mod( 'myportfolio_container_type' );
                         <div class="row">
 
                             <?php
-                                while ($dog->have_posts()) {
+                                while (have_posts()) {
                                     
-                                    $dog->the_post();
+                                   the_post();
 
                                     get_template_part('loop-templates/content', 'dog-archive');
                                 }
