@@ -20,17 +20,33 @@
 
                 <ul class="list-group list-group-flush border-top">
 
-                    <li class="list-group-item px-0 pt-0 pb-0 d-flex flex-row">
+                <li class="list-group-item px-0 pt-0 pb-0 d-flex flex-row">
 
                         <div class="append-area">
 
-                            <p class="text-center dog-age border-right mb-0 px-3 pt-3 pb-3">Age</p>
+                            <p class="text-center dog-age border-right mb-0 px-3 pt-3 pb-3"><?php _e('Sex', 'myportfolio'); ?></p>
 
                         </div> <!-- append-area -->
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php the_field('dog_age'); ?></p>
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php __(the_field('dog_sex'), 'myportfolio'); ?></p>
+
+                        </div> <!-- field-area -->
+
+                    </li> <!-- list-group-item -->
+
+                    <li class="list-group-item px-0 pt-0 pb-0 d-flex flex-row">
+
+                        <div class="append-area">
+
+                            <p class="text-center dog-age border-right mb-0 px-3 pt-3 pb-3"><?php _e('Age', 'myportfolio'); ?></p>
+
+                        </div> <!-- append-area -->
+                        
+                        <div class="field-area">
+
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php __(the_field('dog_age'), 'myportfolio'); ?></p>
 
                         </div> <!-- field-area -->
 
@@ -46,7 +62,7 @@
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php the_field('dog_withers'); ?></p>
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php __(the_field('dog_withers'), 'myportfolio'); ?></p>
 
                         </div> <!-- field-area -->
 
@@ -62,7 +78,7 @@
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php the_field('dog_weight'); ?></p>
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php __(the_field('dog_weight'), 'myportfolio'); ?></p>
 
                         </div> <!-- field-area -->
 
@@ -84,7 +100,7 @@
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php echo the_field('dog_adoption_date'); ?></p>
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php __(the_field('dog_adoption_date'), 'myportfolio'); ?></p>
 
                         </div> <!-- field-area -->
 

@@ -35,7 +35,7 @@ $taxomonies = get_the_terms(get_the_ID(), 'dog');
 
                     </a> <!-- taxonomy link -->
 
-                <?php } ?>
+                <?php } ?> <!-- foreach -->
 
             </li> <!-- list-group-item -->
 
