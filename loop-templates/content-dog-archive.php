@@ -2,14 +2,16 @@
 
 $taxomonies = get_the_terms(get_the_ID(), 'dog');
 
-foreach ($taxomonies as $taxonomy) {
-
-    $sex = $taxonomy->name;
-}
-
 ?>
 
-<div class="col-lg-4 mb-4 d-flex justify-content-center <?php echo lcfirst($sex); ?>">
+<div class="col-lg-4 mb-4 d-flex justify-content-center <?php
+
+    foreach ($taxomonies as $taxonomy) {
+
+        echo lcfirst($taxonomy->name . ' ');
+    } 
+
+    ?>">
 
     <div class="card rounded-lg mt-4">
 
@@ -23,15 +25,18 @@ foreach ($taxomonies as $taxonomy) {
 
         <ul class="list-group list-group-flush">
 
+            
             <li class="list-group-item">
+                
+                <?php foreach ($taxomonies as $taxonomy) { ?>
 
-                <a class="pl-2" href="/dog/<?php echo lcfirst($sex); ?>"><?php _e($sex, 'myportfolio') ?>
+                    <a class="pl-2 mr-3" href="/dog/<?php echo lcfirst($taxonomy->name); ?>"><?php _e($taxonomy->name, 'myportfolio') ?>
 
-                    <span class="pl-2 pr-1 fa fa-tag">
+                        <span class="pl-2 pr-1 fa fa-tag"></span>
 
-                    </span>
+                    </a> <!-- taxonomy link -->
 
-                </a> <!-- taxonomy link -->
+                <?php } ?>
 
             </li> <!-- list-group-item -->
 

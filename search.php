@@ -27,7 +27,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 					<header class="page-header border mb-4">
 
-							<h1 class="page-title pl-1 pr-1">
+							<h1 class="page-title pl-1 pr-1 mb-0">
 								<?php
 									printf(
 										/* translators: %s: query term */
@@ -39,11 +39,11 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 					</header><!-- .page-header -->
 
-				<?php while ( have_posts() ) : the_post(); ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'loop-templates/content', 'search' ); ?>
+						<?php get_template_part( 'loop-templates/content', 'search' ); ?>
 
-				<?php endwhile; ?>
+					<?php endwhile; ?>
 
 				<?php else : ?>
 
