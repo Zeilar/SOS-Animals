@@ -14,9 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title pl-1 pr-1">', '</h1>' ); ?>
 
-		<div class="entry-meta">
+		<div class="entry-meta text-muted pl-1 pr-1">
 
 			<?php myportfolio_posted_on(); ?>
 
@@ -26,9 +26,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-	<div class="entry-content">
+	<div class="entry-content pl-1 pr-1 pt-3">
 
-		<?php the_content(); ?>
+		<?php the_excerpt(); ?>
 
 		<?php
 		wp_link_pages(
