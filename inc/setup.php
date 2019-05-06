@@ -132,9 +132,11 @@ if ( ! function_exists( 'myportfolio_all_excerpts_get_more_link' ) ) {
 	 */
 	function myportfolio_all_excerpts_get_more_link( $post_excerpt ) {
 		if ( ! is_admin() ) {
-			$post_excerpt = $post_excerpt . ' ...<p class="pl-1 pb-2 mb-0"><a class="btn btn-secondary myportfolio-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More &raquo;',
+			$post_excerpt = $post_excerpt . '<p class="pb-1 mb-0"><a class="btn btn-secondary myportfolio-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More &raquo;',
 			'myportfolio' ) . '</a></p>';
 		}
 		return $post_excerpt;
 	}
+
+	
 }

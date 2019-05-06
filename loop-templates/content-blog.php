@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<article <?php post_class('border'); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('border mb-4'); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
 
@@ -31,12 +31,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php the_excerpt(); ?>
 
 		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'myportfolio' ),
-				'after'  => '</div>',
-			)
-		);
+            wp_link_pages(
+                array(
+                    'before' => '<div class="page-links">' . __( 'Pages:', 'myportfolio' ),
+                    'after'  => '</div>',
+                )
+            );
 		?>
 
 	</div> <!-- entry-content -->
