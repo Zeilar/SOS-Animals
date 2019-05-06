@@ -27,8 +27,6 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 				<?php endwhile; // end of the loop. ?>
 
-			</main> <!-- #main -->
-
 			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
         </div> <!-- row -->

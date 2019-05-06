@@ -28,15 +28,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php the_content(); ?>
 
-		<?php
-			wp_link_pages(
-				array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'myportfolio' ),
-					'after'  => '</div>',
-				)
-			);
-		?>
-
 	</div> <!-- entry-content -->
 
 	<footer class="entry-footer">

@@ -25,8 +25,6 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
 
-					<?php myportfolio_post_nav(); ?>
-
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.
 					/*if ( comments_open() || get_comments_number() ) :
@@ -34,9 +32,23 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 					endif;*/
 					?>
 
-				<?php endwhile; // end of the loop. ?>
+					<div class="posts-links">
 
-			</main> <!-- #main -->
+						<?php if (!get_next_post() == '') { ?>
+
+							<a class="pl-1 pr-1 float-left" id="newer" href="<?php echo get_next_post()->guid; ?>">&laquo; <?php echo get_next_post()->post_title; ?></a>
+
+						<?php } ?>
+						
+						<?php if (!get_previous_post() == '') { ?>
+
+							<a class="pl-1 pr-1 float-right" id="older" href="<?php echo get_previous_post()->guid; ?>"><?php echo get_previous_post()->post_title; ?> &raquo;</a>
+
+						<?php } ?>
+
+					</div>
+
+				<?php endwhile; // end of the loop. ?>
 
 			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
