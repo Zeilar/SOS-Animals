@@ -12,7 +12,7 @@
 
                 <?php the_content(); ?>
 
-                <a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e('Read More', 'myportfolio'); ?></a>
+                <a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e('Read More &raquo;', 'myportfolio'); ?></a>
 
             </div> <!-- card-body -->
 
