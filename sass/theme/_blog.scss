@@ -1,5 +1,16 @@
 .post {
 
+    .entry-content {
+
+        .wp-block-image {
+
+            margin: 0;
+
+            padding-bottom: 0.25rem;
+            padding-top: 0.25rem;
+        }
+    }
+
     .entry-footer {
 
         background-color: $gray-300;
