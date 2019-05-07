@@ -21,6 +21,12 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
+			<header class="page-header border">
+
+                <h1 class="pl-1 pr-1"><?php _e('Blog', 'myportfolio'); ?></h1>
+
+            </header>
+
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'loop-templates/content', 'blog' ); ?>

@@ -41,11 +41,11 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
             <?php if ($dog->have_posts()) { ?>
 
-                <h1 class="border px-2 pt-2 pb-2 mb-0">
+                <header class="page-header border">
 
-                    <span class="align-text-top"><?php _e('Dogs: Female', 'myportfolio'); ?></span>
-                    
-                </h1>
+                    <h1 class="page-title pl-1 pr-1"><?php _e('Dogs: Female', 'myportfolio'); ?></h1>
+
+                </header>
 
                 <div class="row">
 

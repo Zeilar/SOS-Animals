@@ -33,19 +33,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</header> <!-- entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	<?php echo get_the_post_thumbnail($post->ID, 'large'); ?>
 
 	<div class="entry-content">
 
 		<?php the_excerpt(); ?>
 
 		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'myportfolio' ),
-				'after'  => '</div>',
-			)
-		);
+
+			wp_link_pages(
+				[
+					'before' => '<div class="page-links">' . __( 'Pages:', 'myportfolio' ),
+					'after'  => '</div>',
+				]
+			);
+
 		?>
 
 	</div> <!-- entry-content -->

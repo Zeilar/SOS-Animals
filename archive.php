@@ -30,7 +30,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 						<?php
 
-							the_archive_title( '<h1 class="page-title">', '</h1>' );
+							the_archive_title('<h1 class="page-title pl-1 pr-1">', '</h1>');
 
 							the_archive_description( '<div class="taxonomy-description">', '</div>' );
 							
