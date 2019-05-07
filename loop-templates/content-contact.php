@@ -21,10 +21,10 @@ if (!$contact_form_id) {
 
         <div class="wrapper" id="contact-form-wrapper">
 
-            <?php the_field('contact_form'); ?>
+            <?php the_field('contact_form_shortcode'); ?>
 
         </div> <!-- wrapper -->
 
     </div> <!-- container -->
 
-</section>
+</section> <!-- contact-section -->

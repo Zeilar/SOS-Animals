@@ -42,5 +42,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 <?php get_template_part( 'global-templates/usps' ); ?> <!-- unique selling points -->
 
 <?php get_template_part( 'global-templates/dogs', 'frontpage' ); ?> <!-- dogs - for frontpage only -->
+
+<?php get_template_part( 'global-templates/contact' ); ?> <!-- contact form -->
  
 <?php get_footer(); ?>
