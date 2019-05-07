@@ -46,7 +46,7 @@
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php _e(strtolower(the_field('dog_age')), 'myportfolio'); ?></p>
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php _e(strtolower(the_field('dog_age')), 'myportfolio'); ?> (<?php the_field('dog_birth_date'); ?>)</p>
 
                         </div> <!-- field-area -->
 
