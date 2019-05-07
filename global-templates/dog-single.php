@@ -107,6 +107,18 @@
                     </li> <!-- list-group-item -->
 
                 </ul> <!-- list-group -->
+
+                <div class="category-list pl-1 pr-1 ">
+
+                    <?php _e('Categories: ', 'myporfolio'); ?><?php the_category(', '); ?>
+
+                </div>
+
+                <div class="tags-list pl-1 pr-1">
+
+                    <?php __(the_tags(), 'myportfolio'); ?>
+
+                </div>
     
             </article> <!-- border -->
 
