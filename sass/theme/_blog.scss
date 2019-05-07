@@ -2,16 +2,6 @@
 
     .post {
 
-        .entry-content {
-
-            a:hover {
-
-                background-color: white;
-
-                color: $primary;
-            }
-        }
-
         .entry-footer {
 
             background-color: $gray-300;
@@ -34,7 +24,7 @@
 
                     text-decoration: none;
 
-                    color: #c69e25;
+                    color: $danger;
                 }
             }
         }

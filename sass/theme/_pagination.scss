@@ -8,7 +8,44 @@
         justify-content: center;
 
         ul {
+
             margin: 0;
+
+            .page-item {
+
+                .page-link {
+
+                    color: white;
+
+                    background-color: $danger;
+
+                    border-color: #870d00;
+                }
+
+                .current {
+
+                    color: $danger;
+
+                    background-color: white;
+                }
+
+                :hover {
+
+                    color: $danger;
+
+                    background-color: white;
+                }
+
+                :focus {
+
+                    border-color: $danger;
+                }
+            }
+
+            .page-item-active {
+
+                border-color: #870d00;
+            }
         }
     }
 }
