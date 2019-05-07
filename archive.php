@@ -22,11 +22,11 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 		<div class="row">
 
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+			<?php get_template_part('global-templates/left-sidebar-check'); ?>
 
-				<?php if ( have_posts() ) : ?>
+				<?php if (have_posts()) : ?>
 
-					<header class="page-header">
+					<header class="page-header border">
 
 						<?php
 
@@ -38,28 +38,26 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 					</header> <!-- page-header -->
 
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php while (have_posts()) : the_post(); ?>
 
-						<?php
-							get_template_part( 'loop-templates/content', get_post_format() );
-						?>
+						<?php get_template_part( 'loop-templates/content', get_post_format()); ?>
 
 					<?php endwhile; ?>
 
 				<?php else : ?>
 
-					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+					<?php get_template_part('loop-templates/content', 'none'); ?>
 
 				<?php endif; ?>
 
-			<?php myportfolio_pagination(); ?>
-
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+			<?php get_template_part('global-templates/right-sidebar-check'); ?>
 
 		</div> <!-- row -->
 
+		<?php myportfolio_pagination(); ?>
+
 	</div> <!-- content -->
 
-	</div> <!-- archive-wrapper -->
+</div> <!-- archive-wrapper -->
 
 <?php get_footer(); ?>

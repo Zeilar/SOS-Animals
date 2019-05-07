@@ -108,7 +108,7 @@
 
                 </ul> <!-- list-group -->
 
-                <div class="category-list pl-1 pr-1 ">
+                <div class="category-list pl-1 pr-1">
 
                     <?php _e('Categories: ', 'myporfolio'); ?><?php the_category(', '); ?>
 

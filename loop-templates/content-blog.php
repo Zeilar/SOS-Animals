@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<article <?php post_class('border mb-4'); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('border'); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
 
@@ -40,3 +40,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</footer> <!-- entry-footer -->
 
 </article> <!-- post-## -->
+
+<hr>

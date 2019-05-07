@@ -60,13 +60,13 @@ $container = get_theme_mod( 'myportfolio_container_type' );
                     
                 </div> <!-- row -->
 
-                <?php myportfolio_pagination(); ?>
-
 			</div> <!-- primary -->
 
 			<?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
 
-		</div> <!-- row -->
+        </div> <!-- row -->
+        
+        <?php myportfolio_pagination(); ?>
 
 	</div> <!-- content -->
 
