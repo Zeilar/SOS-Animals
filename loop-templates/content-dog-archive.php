@@ -10,7 +10,6 @@ $taxomonies = get_the_terms(get_the_ID(), 'dog');
 
         echo lcfirst($taxonomy->name . ' ');
     } 
-
     ?>">
 
     <article class="card rounded-lg">

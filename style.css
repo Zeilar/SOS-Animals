@@ -1,14 +1,10 @@
 /*
-Theme Name: Portfolio
-Theme URI: http://myportfolio.com
-Author: Holger Koenemann
-Author URI: http://www.holgerkoenemann.de
-GitHub Theme URI: https://github.com/myportfolio/myportfolio
-Description: Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid starting point for your next theme project and WordPress website. Use it as starter theme or as a parent theme. It is up to you. Including Font Awesome support, built-in widget slider and much more you need for basic websites. IMPORTANT: All developer dependencies are not bundled with this install file. Just download the .zip, extract it and run "npm install" and "gulp copy-assets" inside the extracted /myportfolio folder.
-That downloads everything and moves it in place so that you can recompile your CSS and JS files;
-A developer version (with Gulp/node and Sass sources) is available on gitHub: https://github.com/myportfolio/myportfolio
-A child theme is available on Github, too: https://github.com/myportfolio/myportfolio-child;
-Version: 0.9.1
+Theme Name: SOS-Animals
+Theme URI: http://www.philipscave.com
+Author: Philip
+GitHub Theme URI: https://github.com/Zeilar/SOS-Animals
+Description: Based on the UnderStrap theme.
+Version: 1
 License: UnderStrap WordPress Theme, Copyright 2013-2017 Holger Koenemann
 UnderStrap is distributed under the terms of the GNU GPL version 2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
