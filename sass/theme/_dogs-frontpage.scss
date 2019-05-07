@@ -4,7 +4,7 @@
 
         background-color: #f9f9f9;
 
-        width: 17rem;
+        width: 16rem;
 
         .card-body {
 
@@ -16,21 +16,21 @@
 
                     text-decoration: none;
     
-                    color: #c69e25
+                    color: $danger;
                 }
             }
 
-            a:hover {
+            .btn:hover {
                 
-                color: $primary;
+                color: white;
                 
-                background-color: white;
+                background-color: $danger;
             }
         }
 
         img {
 
-            height: 13rem;
+            height: 16rem;
         }
     }
 }
