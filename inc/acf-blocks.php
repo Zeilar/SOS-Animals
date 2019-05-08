@@ -16,17 +16,6 @@ function register_acf_blocks() {
 		'icon'              => 'admin-comments',
 		'keywords'          => array('Hero', 'Jumbotron'),
 	));
-
-	// register a success story block
-	acf_register_block(array(
-		'name'              => 'SS',
-		'title'             => 'Success Story',
-		'description'       => __('Make some success stories!', 'myportfolio'),
-		'render_template'   => 'loop-templates/block/ss.php',
-		'category'          => 'formatting',
-		'icon'              => 'admin-comments',
-		'keywords'          => array('SS', 'Success Story'),
-	));
 	
 	// register a fas icon
 	acf_register_block(array(
