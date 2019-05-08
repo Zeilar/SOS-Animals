@@ -1,23 +1,26 @@
-#wrapper-dog-single {
+#archive-wrapper {
 
-    article {
+    #wrapper-dog-single {
 
-        .dog-single-content {
+        article {
 
-            p {
+            .dog-single-content {
 
-                padding: 1rem;
-                padding-top: 0;
+                p {
 
-                margin: 0;
+                    padding: 1rem;
+                    padding-top: 0;
+
+                    margin: 0;
+                }
             }
-        }
 
-        ul {
+            ul {
 
-            .append-area {
-                
-                width: 6rem;
+                .append-area {
+                    
+                    width: 6rem;
+                }
             }
         }
     }
