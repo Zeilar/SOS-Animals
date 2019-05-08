@@ -1,6 +1,6 @@
 <?php 
 
-$taxomonies = get_the_terms(get_the_ID(), 'dog');
+$taxomonies = get_the_terms(get_the_ID(), 'sex');
 
 ?>
 
@@ -8,7 +8,7 @@ $taxomonies = get_the_terms(get_the_ID(), 'dog');
 
     foreach ($taxomonies as $taxonomy) {
 
-        echo lcfirst($taxonomy->name . ' ');
+        echo lcfirst($taxonomy->name);
     } 
     ?>">
 
@@ -28,7 +28,7 @@ $taxomonies = get_the_terms(get_the_ID(), 'dog');
                 
                 <?php foreach ($taxomonies as $taxonomy) { ?>
 
-                    <a class="pl-2 mr-3" href="/dog/<?php echo lcfirst($taxonomy->name); ?>"><?php _e($taxonomy->name, 'myportfolio') ?>
+                    <a class="pl-2 mr-3" href="/sex/<?php echo lcfirst($taxonomy->name); ?>"><?php _e($taxonomy->name, 'myportfolio') ?>
 
                         <span class="pl-2 pr-1 fa fa-tag"></span>
 
