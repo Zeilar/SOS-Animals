@@ -2,14 +2,14 @@
 
     .card {
 
-        width: 18rem; // the max width with 3 .col per page
+        width: 24rem;
 
         .btn {
 
             position: absolute;
             transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
-            top: 16.8rem;
+            top: 22.8rem;
             left: 50%;
             width: 100%;
             background-color: rgba(255, 255, 255, 0.75);
@@ -27,7 +27,7 @@
 
         .card-image {
 
-            height: 18rem;
+            height: 24rem;
         }
     }
 }
