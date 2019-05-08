@@ -2,7 +2,7 @@
 
     .card {
 
-        width: 22rem;
+        width: 18rem; // the max width with 3 .col per page
 
         .list-group-item {
 
@@ -38,9 +38,9 @@
             }   
         }
 
-        img {
+        .card-image {
 
-            height: 12rem;
+            height: 16rem;
         }
     }
 }

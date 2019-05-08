@@ -23,7 +23,7 @@ if (!$contact_form_id) {
 
             <?php __(the_field('contact_form_shortcode'), 'myportfolio'); ?>
 
-        </div> <!-- wrapper -->
+        </div> <!-- contact-form-wrapper -->
 
     </div> <!-- container -->
 

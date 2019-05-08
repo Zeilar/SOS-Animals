@@ -15,6 +15,8 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 ?>
 
+<?php get_template_part( 'global-templates/hero' ); ?> <!-- widget hero -->
+
 <div class="wrapper" id="frontpage-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>-fluid" id="content" tabindex="-1">
@@ -36,8 +38,6 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 	</div> <!-- content -->
 
 </div> <!-- wrapper -->
-
-<?php get_template_part( 'global-templates/hero' ); ?> <!-- hero -->
 
 <?php get_template_part( 'global-templates/usps' ); ?> <!-- unique selling points -->
 

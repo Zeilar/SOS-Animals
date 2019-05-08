@@ -2,35 +2,32 @@
 
     .card {
 
-        background-color: #f9f9f9;
+        width: 18rem; // the max width with 3 .col per page
 
-        width: 16rem;
+        .btn {
 
-        .card-body {
-
-            height: 8rem;
-
-            .card-title {
-
-                a:hover {
-
-                    text-decoration: none;
-    
-                    color: $danger;
-                }
-            }
-
-            .btn:hover {
-                
-                color: white;
-                
-                background-color: $danger;
-            }
+            position: absolute;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            top: 16.8rem;
+            left: 50%;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.75);
+            color: rgba($danger, 1.0);
+            border-color: $danger;
+            border-radius: 0;
         }
 
-        img {
+        .btn:hover {
 
-            height: 16rem;
+            color: white;
+
+            background-color: $danger;
+        }
+
+        .card-image {
+
+            height: 18rem;
         }
     }
 }
