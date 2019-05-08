@@ -161,7 +161,7 @@ if ( ! function_exists( 'myportfolio_widgets_init' ) ) {
 				'name'          => __( 'Footer Full', 'myportfolio' ),
 				'id'            => 'footerfull',
 				'description'   => __( 'Full sized footer widget with dynamic grid', 'myportfolio' ),
-				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
+				'before_widget' => '<div id="%1$s" class="footer-widget text-center %2$s dynamic-classes">',
 				'after_widget'  => '</div><!-- .footer-widget -->',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',

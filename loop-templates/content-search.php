@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</header> <!-- entry-header -->
 
-	<div class="entry-summary pl-1 pb-1">
+	<div class="entry-summary px-1 pt-1 pb-1">
 
 		<?php the_excerpt(); ?>
 

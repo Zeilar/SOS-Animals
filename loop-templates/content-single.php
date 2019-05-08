@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</header> <!-- entry-header -->
 
-	<div class="entry-content pl-1 pr-1 pt-1">
+	<div class="entry-content px-1 pt-1 pb-1">
 
 		<?php the_content(); ?>
 

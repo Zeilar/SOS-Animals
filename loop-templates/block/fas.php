@@ -1,0 +1,1 @@
+<i class="fas <?php the_field('fas_icon'); ?>"></i>

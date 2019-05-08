@@ -6,17 +6,6 @@
 
 function register_acf_blocks() {
 
-	// register a USP block
-	acf_register_block(array(
-		'name'              => 'USP',
-		'title'             => __('Unique selling point', 'myportfolio'),
-		'description'       => __('Sell yourself with these blocks.', 'myportfolio'),
-		'render_template'   => 'loop-templates/block/usp.php',
-		'category'          => 'formatting',
-		'icon'              => 'admin-comments',
-		'keywords'          => array('USP', 'Unique selling point'),
-	));
-
 	// register a hero block
 	acf_register_block(array(
 		'name'              => 'Hero',
@@ -26,6 +15,28 @@ function register_acf_blocks() {
 		'category'          => 'formatting',
 		'icon'              => 'admin-comments',
 		'keywords'          => array('Hero', 'Jumbotron'),
+	));
+
+	// register a success story block
+	acf_register_block(array(
+		'name'              => 'SS',
+		'title'             => 'Success Story',
+		'description'       => __('Make some success stories!', 'myportfolio'),
+		'render_template'   => 'loop-templates/block/ss.php',
+		'category'          => 'formatting',
+		'icon'              => 'admin-comments',
+		'keywords'          => array('SS', 'Success Story'),
+	));
+	
+	// register a fas icon
+	acf_register_block(array(
+		'name'              => 'FAS',
+		'title'             => 'Font Awesome',
+		'description'       => __('Add any Font Awesome icon you like!', 'myportfolio'),
+		'render_template'   => 'loop-templates/block/fas.php',
+		'category'          => 'formatting',
+		'icon'              => 'admin-comments',
+		'keywords'          => array('FAS', 'Font Awesome'),
 	));
 }
 
