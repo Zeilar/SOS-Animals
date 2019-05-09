@@ -11,6 +11,11 @@
             align-items: center;
            
             height: 40rem;
+
+            @media screen and (max-width: 400px) {
+
+                height: 15rem;
+            }
         }
     }
 }
