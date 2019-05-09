@@ -87,8 +87,6 @@ if ($age->y && $age->m && $age->d) {
     $age = $years . $months . $days;
 }
 
-var_dump($age);
-
 ?>
 
 <div class="container" id="content">
