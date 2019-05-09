@@ -76,7 +76,7 @@ $age = $age->y;
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php _e(strtolower(get_field('dog_withers')), 'myportfolio'); ?></p>
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php echo strtolower(get_field('dog_withers')) . 'cm'; ?></p>
 
                         </div> <!-- field-area -->
 
@@ -92,7 +92,7 @@ $age = $age->y;
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php _e(strtolower(get_field('dog_weight')), 'myportfolio'); ?></p>
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php echo strtolower(get_field('dog_weight')) . 'kg'; ?></p>
 
                         </div> <!-- field-area -->
 
