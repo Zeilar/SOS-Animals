@@ -43,7 +43,7 @@
   // submit button, inherit .btn and .btn-outline-primary classes.
   input[type=submit] {
     @extend .btn;
-    @extend .btn-outline-primary;
+    @extend .btn-outline-info;
   }
 
   .wpcf7-form {
