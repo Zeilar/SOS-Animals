@@ -1,6 +1,13 @@
-<div class="col d-flex d-sm-none justify-content-center" style="background: url('<?php echo get_field('ss_background_image') . ' '; 
+
+<div class="col d-none d-sm-none d-md-block justify-content-center" style="background: url('<?php echo get_field('ss_background_image') . ' '; 
 the_field('ss_background_image_url'); ?>'); background-size: 100% 100%;">
 
-    <h1 class="ss-title pl-1 pr-1"><?php the_field('ss_title'); ?></h1>
+    <div class="ss-content container">
+
+    <h1 class="ss-title w-100 text-center pl-1 pr-1" style="height: 3rem;"><?php the_title(); ?></h1>
+
+        <?php the_content(); ?>
+
+    </div> <!-- ss-content -->
             
 </div> <!-- col -->
