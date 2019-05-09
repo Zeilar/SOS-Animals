@@ -3,12 +3,9 @@
 $birth = get_field('dog_birth_date', false, false); 
 
 $birth = new DateTime($birth);
-
 $today = new DateTime($today);
 
 $age = date_diff($today, $birth);
-
-var_dump($age);
 
 if ($age->y >= 1) {
     
