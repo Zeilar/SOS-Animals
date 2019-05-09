@@ -144,13 +144,13 @@ if ($age->y > 1) {
 
                 </div> <!-- tags-list -->
 
-                <div class="post-links pl-1 pr-1">
+                <div class="posts-links pl-1 pr-1">
 
                     <span><?php next_post_link('&laquo; %link'); ?></span>
 
                     <span class="float-right"><?php previous_post_link('%link &raquo;'); ?></span>
 
-                </div>
+                </div> <!-- posts-links -->
     
             </article> <!-- border -->
 

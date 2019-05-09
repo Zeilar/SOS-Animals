@@ -19,27 +19,19 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 		<div class="row">
 
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+			<?php get_template_part('global-templates/left-sidebar-check'); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
 
-					<div class="posts-links">
+					<div class="posts-links pl-1 pr-1">
 
-						<?php if (!get_next_post() == '') { ?>
+						<span><?php next_post_link('&laquo; %link'); ?></span>
 
-							<a class="pl-1 pr-1 float-left" id="newer" href="<?php echo get_next_post()->guid; ?>">&laquo; <?php echo get_next_post()->post_title; ?></a>
+						<span class="float-right"><?php previous_post_link('%link &raquo;'); ?></span>
 
-						<?php } ?> <!-- I found the correct method for next/previous post links, but this works so why change it -->
-						
-						<?php if (!get_previous_post() == '') { ?>
-
-							<a class="pl-1 pr-1 float-right" id="older" href="<?php echo get_previous_post()->guid; ?>"><?php echo get_previous_post()->post_title; ?> &raquo;</a>
-
-						<?php } ?>
-
-					</div>
+                	</div> <!-- posts-links -->
 
 				<?php endwhile; // end of the loop. ?>
 
