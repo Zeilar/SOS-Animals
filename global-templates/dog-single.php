@@ -114,7 +114,7 @@ $age = $age->y;
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php echo _e(ucfirst(get_field('dog_adoption_date')), 'myportfolio'); ?></p>
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php _e(ucfirst(get_field('dog_adoption_date')), 'myportfolio'); ?></p>
 
                         </div> <!-- field-area -->
 
