@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<img class="img-fluid dog-image mx-auto mb-3 mt-3 pl-1" src="<?php the_field('dog_image'); ?>" alt="<?php _e('Dog image', 'myportfolio'); ?>">
 
-	<div class="entry-content">
+	<div class="entry-content pb-1">
 
 		<?php the_excerpt(); ?>
 
