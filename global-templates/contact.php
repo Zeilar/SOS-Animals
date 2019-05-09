@@ -18,7 +18,7 @@ if ($contact->have_posts()) {
 
 ?>
 
-	<div class="wrapper" id="wrapper-contact">
+	<div class="wrapper bg-info" id="wrapper-contact">
 
         <div class="container">
 
