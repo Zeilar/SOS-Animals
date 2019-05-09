@@ -25,20 +25,13 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
 
-					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					/*if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;*/
-					?>
-
 					<div class="posts-links">
 
 						<?php if (!get_next_post() == '') { ?>
 
 							<a class="pl-1 pr-1 float-left" id="newer" href="<?php echo get_next_post()->guid; ?>">&laquo; <?php echo get_next_post()->post_title; ?></a>
 
-						<?php } ?>
+						<?php } ?> <!-- I found the correct method for next/previous post links, but this works so why change it -->
 						
 						<?php if (!get_previous_post() == '') { ?>
 

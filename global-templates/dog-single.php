@@ -7,13 +7,13 @@ $today = new DateTime($today);
 
 $age = date_diff($today, $birth);
 
-if ($age->y >= 1) {
+if ($age->y > 1) {
     
     $age = $age->y . ' years';
 
-} elseif ($age->m >= 1) {
+} elseif ($age->y >= 1 && $age->m >= 1) {
 
-    $age = $age->m . ' months';
+    $age = '1 year and ' . $age->m . ' months';
 
 } else {
 
@@ -136,11 +136,19 @@ if ($age->y >= 1) {
 
                     <?php _e('Categories: ', 'myporfolio'); ?><?php the_category(', '); ?>
 
-                </div>
+                </div> <!-- category-list -->
 
                 <div class="tags-list pl-1 pr-1">
 
                     <?php __(the_tags(), 'myportfolio'); ?>
+
+                </div> <!-- tags-list -->
+
+                <div class="post-links pl-1 pr-1">
+
+                    <span><?php next_post_link('&laquo; %link'); ?></span>
+
+                    <span class="float-right"><?php previous_post_link('%link &raquo;'); ?></span>
 
                 </div>
     
