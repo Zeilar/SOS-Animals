@@ -1,5 +1,5 @@
 
-<div class="col d-none d-sm-none d-md-block justify-content-center" style="background: url('<?php echo get_field('ss_background_image') . ' '; 
+<div class="col d-none d-sm-none d-md-block rounded" style="background: url('<?php echo get_field('ss_background_image') . ' '; 
 the_field('ss_background_image_url'); ?>'); background-size: 100% 100%;">
 
     <div class="ss-content container">
