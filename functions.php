@@ -18,8 +18,8 @@ $understrap_includes = array(
 	'/pagination.php',                      // Custom pagination for this theme.
 	'/hooks.php',                           // Custom hooks.
 	'/extras.php',                          // Custom functions that act independently of the theme templates.
-	//'/custom-post-types.php',               // Load Custom Post Types.
-	//'/custom-taxonomies.php',               // Load Custom Taxonomies.
+	'/custom-post-types.php',               // Load Custom Post Types.
+	'/custom-taxonomies.php',               // Load Custom Taxonomies.
 	'/acf.php',                             // Load ACF Plugin.
 	'/acf-fieldgroups.php',                 // Load ACF Field Groups.
 	'/acf-blocks.php',                      // Register ACF Blocks.
