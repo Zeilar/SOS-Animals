@@ -7,26 +7,50 @@ $today = new DateTime($today);
 
 $age = date_diff($today, $birth);
 
+$years = $age->y;
+$months = $age->m;
+$days = $age->d;
+
 if ($age->y > 1) {
-    
-    $age = $age->y . ' years and ' . $age->m . ' months';
 
-} elseif ($age->y == 1 && $age->m == 0) {
+    $years = $years . ' years';
 
-    $age = '1 year';
+} elseif ($age->y == 1) {
 
-} elseif ($age->y > 1 && $age->m == 0) {
-
-    $age = $age->y . ' years and ' . $age->m . ' months';
-
-} elseif ($age->y == 0 && $age->m >= 1) {
-
-    $age = $age->m . ' months';
+    $years = $years . ' year';
 
 } else {
 
-    $age = $age->d . ' days';
+    $years == null;
 }
+
+if ($age->m > 1) {
+
+    $months = ' and ' . $months . ' months';
+
+} elseif ($age->m == 1) {
+
+    $months = ' and ' . $months . ' month';
+
+} else {
+
+    $months == null;
+}
+
+if ($age->d > 1) {
+
+    $days = ' and ' . $days . ' days';
+
+} elseif ($age->d == 1) {
+
+    $days = ' and ' . $days . ' day';
+
+} else {
+
+    $days == null;
+}
+
+$age = $years . $months . $days;
 
 ?>
 
