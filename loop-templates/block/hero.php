@@ -2,8 +2,9 @@
 
     <div class="container">
 
-        <h1 class="display-4"><strong><?php the_field('hero_title'); ?></strong></h1>
-        <p class="lead"><?php the_field('hero_text'); ?></p>
+        <h1 class="display-3"><strong><?php the_field('hero_title'); ?></strong></h1>
+
+        <p class="display-4"><strong><?php the_field('hero_text'); ?></strong></p>
 
         <?php if (get_field('hero_button_url')) { ?>
 
@@ -11,7 +12,7 @@
 
                 <p><?php the_field('hero_button_text'); ?></p>
 
-            </a>
+            </a> <!-- heru-button -->
 
         <?php } ?> <!-- end of if -->
             
