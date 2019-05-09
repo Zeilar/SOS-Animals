@@ -1,14 +1,27 @@
 <?php 
 
-$adoption = get_field('dog_adoption_date', false, false);
 $birth = get_field('dog_birth_date', false, false); 
 
-$adoption = new DateTime($adoption);
 $birth = new DateTime($birth);
 
-$age = date_diff($adoption, $birth);
+$today = new DateTime($today);
 
-$age = $age->y;
+$age = date_diff($today, $birth);
+
+var_dump($age);
+
+if ($age->y >= 1) {
+    
+    $age = $age->y . ' years';
+
+} elseif ($age->m >= 1) {
+
+    $age = $age->m . ' months';
+
+} else {
+
+    $age = $age->d . ' days';
+}
 
 ?>
 
@@ -60,7 +73,7 @@ $age = $age->y;
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php echo $age; _e(' years', 'myportfolio'); ?> (<?php _e(the_field('dog_birth_date'), 'myportfolio'); ?>)</p>
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php _e($age, 'myportfolio'); ?> (<?php _e(the_field('dog_birth_date'), 'myportfolio'); ?>)</p>
                       
                         </div> <!-- field-area -->
 
