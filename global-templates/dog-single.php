@@ -32,9 +32,9 @@ if ($age->y >= 1) {
                 
                 <h1 class="text-center border-bottom pb-2 pt-2"><?php the_title(); ?></h1>
                 
-                <img class="img-fluid dog-image mx-auto mb-3 mt-3 d-block" src="<?php the_field('dog_image'); ?>" alt="<?php _e('Dog image', 'myportfolio'); ?>">
+                <img class="img-fluid dog-image px-2 px-md-0 mx-md-auto mb-2 mt-2 d-block" src="<?php the_field('dog_image'); ?>" alt="<?php _e('Dog image', 'myportfolio'); ?>">
                 
-                <div class="dog-single-content">
+                <div class="dog-single-content px-2 pt-2 pb-2">
                     
                     <?php the_content(); ?>
 
@@ -46,15 +46,15 @@ if ($age->y >= 1) {
 
                     <li class="list-group-item px-0 pt-0 pb-0 d-flex flex-row">
 
-                        <div class="append-area">
+                        <div class="append-area border-right">
 
-                            <p class="text-center dog-age border-right mb-0 px-3 pt-3 pb-3"><?php _e('Sex', 'myportfolio'); ?></p>
+                            <p class="text-center dog-age mb-0 px-2 pt-2 pb-2"><?php _e('Sex', 'myportfolio'); ?></p>
 
                         </div> <!-- append-area -->
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php _e(ucfirst(get_field('dog_sex')), 'myportfolio'); ?></p>
+                            <p class="dog-age mb-0 px-2 pt-2 pb-2"><?php _e(ucfirst(get_field('dog_sex')), 'myportfolio'); ?></p>
 
                         </div> <!-- field-area -->
 
@@ -62,15 +62,15 @@ if ($age->y >= 1) {
 
                     <li class="list-group-item px-0 pt-0 pb-0 d-flex flex-row">
 
-                        <div class="append-area">
+                        <div class="append-area border-right">
 
-                            <p class="text-center dog-age border-right mb-0 px-3 pt-3 pb-3"><?php _e('Age', 'myportfolio'); ?></p>
+                            <p class="text-center dog-age mb-0 px-2 pt-2 pb-2"><?php _e('Age', 'myportfolio'); ?></p>
 
                         </div> <!-- append-area -->
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php _e($age, 'myportfolio'); ?> (<?php _e(the_field('dog_birth_date'), 'myportfolio'); ?>)</p>
+                            <p class="dog-age mb-0 px-2 pt-2 pb-2"><?php _e($age, 'myportfolio'); ?> (<?php _e(the_field('dog_birth_date'), 'myportfolio'); ?>)</p>
                       
                         </div> <!-- field-area -->
 
@@ -78,15 +78,15 @@ if ($age->y >= 1) {
 
                     <li class="list-group-item px-0 pt-0 pb-0 d-flex flex-row">
 
-                        <div class="append-area">
+                        <div class="append-area border-right">
 
-                            <p class="text-center dog-withers border-right mb-0 px-3 pt-3 pb-3"><?php _e('Withers', 'myportfolio'); ?></p>
+                            <p class="text-center dog-withers mb-0 px-2 pt-2 pb-2"><?php _e('Withers', 'myportfolio'); ?></p>
 
                         </div> <!-- append-area -->
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php echo strtolower(get_field('dog_withers')) . 'cm'; ?></p>
+                            <p class="dog-age mb-0 px-2 pt-2 pb-2"><?php echo strtolower(get_field('dog_withers')) . 'cm'; ?></p>
 
                         </div> <!-- field-area -->
 
@@ -94,15 +94,15 @@ if ($age->y >= 1) {
 
                     <li class="list-group-item px-0 pt-0 pb-0 d-flex flex-row">
 
-                        <div class="append-area">
+                        <div class="append-area border-right">
 
-                            <p class="text-center dog-weight border-right mb-0 px-3 pt-3 pb-3"><?php _e('Weight', 'myportfolio'); ?></p>
+                            <p class="text-center dog-weight mb-0 px-2 pt-2 pb-2"><?php _e('Weight', 'myportfolio'); ?></p>
 
                         </div> <!-- append-area -->
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php echo strtolower(get_field('dog_weight')) . 'kg'; ?></p>
+                            <p class="dog-age mb-0 px-2 pt-2 pb-2"><?php echo strtolower(get_field('dog_weight')) . 'kg'; ?></p>
 
                         </div> <!-- field-area -->
 
@@ -116,15 +116,15 @@ if ($age->y >= 1) {
                         } 
                         ?>">
 
-                        <div class="append-area">
+                        <div class="append-area border-right">
 
-                            <p class="text-center dog-age border-right mb-0 px-3 pt-3 pb-3"><?php _e('Adopted', 'myportfolio'); ?></p>
+                            <p class="text-center dog-age mb-0 px-2 pt-2 pb-2"><?php _e('Adopted', 'myportfolio'); ?></p>
 
                         </div> <!-- append-area -->
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php _e(ucfirst(get_field('dog_adoption_date')), 'myportfolio'); ?></p>
+                            <p class="dog-age mb-0 px-2 pt-2 pb-2"><?php _e(ucfirst(get_field('dog_adoption_date')), 'myportfolio'); ?></p>
 
                         </div> <!-- field-area -->
 
