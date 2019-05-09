@@ -33,7 +33,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</header> <!-- entry-header -->
 
-	<?php echo get_the_post_thumbnail($post->ID, 'large', ['class' => 'pl-1 pt-1']); ?>
+	<?php if (get_field('dog_image')) { ?> <!-- load dog image if possible -->
+
+		<img class="img-fluid dog-image mx-auto mb-3 mt-3 pl-1" src="<?php the_field('dog_image'); ?>" alt="<?php _e('Dog image', 'myportfolio'); ?>">
+
+	<?php } else { ?>	
+
+		<?php echo get_the_post_thumbnail($post->ID, 'large', ['class' => 'pl-1 pt-1']); ?> <!-- otherwise load thumbnail -->
+
+	<?php } ?>
 
 	<div class="entry-content pb-1">
 
