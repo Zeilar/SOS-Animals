@@ -108,11 +108,11 @@ if ($age->y >= 1) {
 
                     </li> <!-- list-group-item -->
 
-                    <li class="list-group-item px-0 pt-0 pb-0 d-flex flex-row <?php 
+                    <li class="list-group-item px-0 pt-0 pb-0 d-flex flex-row" style="<?php 
                     
                         if (!get_field('dog_adoption_date')) {
 
-                            echo 'd-none d-sm-none'; 
+                            echo 'display: none !important;'; 
                         } 
                         ?>">
 
