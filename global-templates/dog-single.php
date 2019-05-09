@@ -11,6 +11,8 @@ $years = $age->y;
 $months = $age->m;
 $days = $age->d;
 
+// strings formatting based on singular & plural
+
 if ($age->y > 1) {
 
     $years = $years . ' years ';
@@ -50,18 +52,42 @@ if ($age->d > 1) {
     $days == null;
 }
 
-if ($age->y == 0) {
+// now the strings are prepared for the conditions below
 
-    $age = $months . ' and ' . $days;
+if ($age->y && $age->m && $age->d) {
 
-} elseif ($age->m == 0) {
+    $age = $years . $months . $days;
+
+} elseif ($age->y && $age->m && !$age->d) {
+
+    $age = $years . $months;
+
+} elseif ($age->y && !$age->m && $age->d) {
+
+    $age = $years . $days;
+
+} elseif (!$age->y && $age->m && $age->d) {
+
+    $age = $months . $days;
+
+} elseif ($age->y && !$age->m && !$age->d) {
+
+    $age = $years;
+
+} elseif (!$age->y && !$age->m && $age->d ) {
 
     $age = $days;
-    
+
+} elseif (!$age->y && $age->m && !$age->d) {
+
+    $age = $months;
+
 } else {
 
     $age = $years . $months . $days;
 }
+
+var_dump($age);
 
 ?>
 
