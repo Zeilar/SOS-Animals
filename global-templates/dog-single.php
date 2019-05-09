@@ -1,3 +1,17 @@
+<?php 
+
+$adoption = get_field('dog_adoption_date', false, false);
+$birth = get_field('dog_birth_date', false, false); 
+
+$adoption = new DateTime($adoption);
+$birth = new DateTime($birth);
+
+$age = date_diff($adoption, $birth);
+
+$age = $age->y;
+
+?>
+
 <div class="container" id="content">
 
     <div class="row justify-content-center">
@@ -46,8 +60,8 @@
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php _e(strtolower(the_field('dog_age')), 'myportfolio'); ?> (<?php the_field('dog_birth_date'); ?>)</p>
-
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php echo $age; _e(' years', 'myportfolio'); ?> (<?php date_i18n(the_field('dog_birth_date')); ?>)</p>
+                      
                         </div> <!-- field-area -->
 
                     </li> <!-- list-group-item -->
@@ -100,7 +114,7 @@
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php _e(ucfirst(get_field('dog_adoption_date')), 'myportfolio'); ?></p>
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php date_i18n(ucfirst(get_field('dog_adoption_date'))); ?></p>
 
                         </div> <!-- field-area -->
 
