@@ -60,7 +60,7 @@ $age = $age->y;
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php echo $age; _e(' years', 'myportfolio'); ?> (<?php date_i18n(the_field('dog_birth_date')); ?>)</p>
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php echo $age; _e(' years', 'myportfolio'); ?> (<?php _e(the_field('dog_birth_date'), 'myportfolio'); ?>)</p>
                       
                         </div> <!-- field-area -->
 
@@ -114,7 +114,7 @@ $age = $age->y;
                         
                         <div class="field-area">
 
-                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php date_i18n(ucfirst(get_field('dog_adoption_date'))); ?></p>
+                            <p class="text-left dog-age mb-0 px-3 pt-3 pb-3"><?php echo _e(ucfirst(get_field('dog_adoption_date')), 'myportfolio'); ?></p>
 
                         </div> <!-- field-area -->
 
