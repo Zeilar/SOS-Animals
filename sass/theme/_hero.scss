@@ -3,5 +3,14 @@
     #main {
 
         width: 100vw;
+
+        .jumbotron {
+
+            display: flex;
+
+            align-items: center;
+           
+            height: 40rem;
+        }
     }
 }
