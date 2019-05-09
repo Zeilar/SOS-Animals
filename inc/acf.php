@@ -1,4 +1,4 @@
-<?php /*
+<?php 
 
 // Define path and URL to the ACF plugin.
 define( 'MY_ACF_PATH', get_stylesheet_directory() . '/inc/acf/' );
