@@ -13,11 +13,11 @@ $days = $age->d;
 
 if ($age->y > 1) {
 
-    $years = $years . ' years';
+    $years = $years . ' years ';
 
 } elseif ($age->y == 1) {
 
-    $years = $years . ' year';
+    $years = $years . ' year ';
 
 } else {
 
@@ -26,11 +26,11 @@ if ($age->y > 1) {
 
 if ($age->m > 1) {
 
-    $months = ' and ' . $months . ' months';
+    $months = $months . ' months ';
 
 } elseif ($age->m == 1) {
 
-    $months = ' and ' . $months . ' month';
+    $months = $months . ' month ';
 
 } else {
 
@@ -39,18 +39,29 @@ if ($age->m > 1) {
 
 if ($age->d > 1) {
 
-    $days = ' and ' . $days . ' days';
+    $days = $days . ' days ';
 
 } elseif ($age->d == 1) {
 
-    $days = ' and ' . $days . ' day';
+    $days = $days . ' day ';
 
 } else {
 
     $days == null;
 }
 
-$age = $years . $months . $days;
+if ($age->y == 0) {
+
+    $age = $months . ' and ' . $days;
+
+} elseif ($age->m == 0) {
+
+    $age = $days;
+    
+} else {
+
+    $age = $years . $months . $days;
+}
 
 ?>
 
