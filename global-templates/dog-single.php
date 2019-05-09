@@ -9,11 +9,19 @@ $age = date_diff($today, $birth);
 
 if ($age->y > 1) {
     
-    $age = $age->y . ' years';
+    $age = $age->y . ' years and ' . $age->m . ' months';
 
-} elseif ($age->y >= 1 && $age->m >= 1) {
+} elseif ($age->y == 1 && $age->m == 0) {
 
-    $age = '1 year and ' . $age->m . ' months';
+    $age = '1 year';
+
+} elseif ($age->y > 1 && $age->m == 0) {
+
+    $age = $age->y . ' years and ' . $age->m . ' months';
+
+} elseif ($age->y == 0 && $age->m >= 1) {
+
+    $age = $age->m . ' months';
 
 } else {
 
