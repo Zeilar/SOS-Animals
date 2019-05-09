@@ -116,8 +116,8 @@ msgstr "ערכת עיצוב: %1$s מבוסס  %2$s."
 
 #. Theme URI of the plugin/theme
 #: footer.php:35
-msgid "http://myportfolio.com"
-msgstr "http://myportfolio.com"
+msgid "http://sosa.com"
+msgstr "http://sosa.com"
 
 #. translators:
 #: footer.php:39
@@ -678,7 +678,7 @@ msgid ""
 "support, built-in widget slider and much more you need for basic websites. "
 "IMPORTANT: All developer dependencies are not bundled with this install "
 "file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /myportfolio folder."
+"copy-assets\" inside the extracted /sosa folder."
 msgstr ""
 
 #. Author of the plugin/theme

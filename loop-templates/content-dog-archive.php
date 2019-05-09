@@ -14,7 +14,7 @@ $taxomonies = get_the_terms(get_the_ID(), 'sex');
 
     <article class="card rounded-lg">
 
-        <img class="card-image rounded-top" src="<?php the_field('dog_image'); ?>" alt="<?php _e('Dog image', 'myportfolio'); ?>">
+        <img class="card-image rounded-top" src="<?php the_field('dog_image'); ?>" alt="<?php _e('Dog image', 'sosa'); ?>">
 
         <div class="card-body">
 
@@ -28,7 +28,7 @@ $taxomonies = get_the_terms(get_the_ID(), 'sex');
                 
                 <?php foreach ($taxomonies as $taxonomy) { ?>
 
-                    <a class="pl-2 mr-3" href="/sex/<?php echo lcfirst($taxonomy->name); ?>"><?php _e($taxonomy->name, 'myportfolio') ?>
+                    <a class="pl-2 mr-3" href="/sex/<?php echo lcfirst($taxonomy->name); ?>"><?php _e($taxonomy->name, 'sosa') ?>
 
                         <span class="pl-2 pr-1 fa fa-tag"></span>
 
@@ -42,7 +42,7 @@ $taxomonies = get_the_terms(get_the_ID(), 'sex');
 
         <div class="card-body">
 
-            <a href="<?php the_permalink(); ?>" class="btn btn-block btn-outline-danger"><?php _e('Read More &raquo;', 'myportfolio'); ?></a>
+            <a href="<?php the_permalink(); ?>" class="btn btn-block btn-outline-danger"><?php _e('Read More &raquo;', 'sosa'); ?></a>
 
         </div> <!-- card-body -->
 

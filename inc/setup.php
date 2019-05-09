@@ -2,7 +2,7 @@
 /**
  * Theme basic setup.
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -14,9 +14,9 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-add_action( 'after_setup_theme', 'myportfolio_setup' );
+add_action( 'after_setup_theme', 'sosa_setup' );
 
-if ( ! function_exists ( 'myportfolio_setup' ) ) {
+if ( ! function_exists ( 'sosa_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -24,14 +24,14 @@ if ( ! function_exists ( 'myportfolio_setup' ) ) {
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function myportfolio_setup() {
+	function sosa_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on myportfolio, use a find and replace
-		 * to change 'myportfolio' to the name of your theme in all the template files
+		 * If you're building a theme based on sosa, use a find and replace
+		 * to change 'sosa' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain( 'myportfolio', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'sosa', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -46,7 +46,7 @@ if ( ! function_exists ( 'myportfolio_setup' ) ) {
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'myportfolio' ),
+			'primary' => __( 'Primary Menu', 'sosa' ),
 		) );
 
 		/*
@@ -84,7 +84,7 @@ if ( ! function_exists ( 'myportfolio_setup' ) ) {
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'myportfolio_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'sosa_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -96,15 +96,15 @@ if ( ! function_exists ( 'myportfolio_setup' ) ) {
 		add_theme_support( 'responsive-embeds' );
 
 		// Check and setup theme default settings.
-		myportfolio_setup_theme_default_settings();
+		sosa_setup_theme_default_settings();
 
 	}
 }
 
 
-add_filter( 'excerpt_more', 'myportfolio_custom_excerpt_more' );
+add_filter( 'excerpt_more', 'sosa_custom_excerpt_more' );
 
-if ( ! function_exists( 'myportfolio_custom_excerpt_more' ) ) {
+if ( ! function_exists( 'sosa_custom_excerpt_more' ) ) {
 	/**
 	 * Removes the ... from the excerpt read more link
 	 *
@@ -112,7 +112,7 @@ if ( ! function_exists( 'myportfolio_custom_excerpt_more' ) ) {
 	 *
 	 * @return string
 	 */
-	function myportfolio_custom_excerpt_more( $more ) {
+	function sosa_custom_excerpt_more( $more ) {
 		if ( ! is_admin() ) {
 			$more = '';
 		}
@@ -120,9 +120,9 @@ if ( ! function_exists( 'myportfolio_custom_excerpt_more' ) ) {
 	}
 }
 
-add_filter( 'wp_trim_excerpt', 'myportfolio_all_excerpts_get_more_link' );
+add_filter( 'wp_trim_excerpt', 'sosa_all_excerpts_get_more_link' );
 
-if ( ! function_exists( 'myportfolio_all_excerpts_get_more_link' ) ) {
+if ( ! function_exists( 'sosa_all_excerpts_get_more_link' ) ) {
 	/**
 	 * Adds a custom read more link to all excerpts, manually or automatically generated
 	 *
@@ -130,10 +130,10 @@ if ( ! function_exists( 'myportfolio_all_excerpts_get_more_link' ) ) {
 	 *
 	 * @return string
 	 */
-	function myportfolio_all_excerpts_get_more_link( $post_excerpt ) {
+	function sosa_all_excerpts_get_more_link( $post_excerpt ) {
 		if ( ! is_admin() ) {
-			$post_excerpt = $post_excerpt . '<p class="mb-0"><a class="btn btn-outline-danger myportfolio-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More &raquo;',
-			'myportfolio' ) . '</a></p>';
+			$post_excerpt = $post_excerpt . '<p class="mb-0"><a class="btn btn-outline-danger sosa-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More &raquo;',
+			'sosa' ) . '</a></p>';
 		}
 		return $post_excerpt;
 	}

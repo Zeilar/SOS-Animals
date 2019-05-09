@@ -2,17 +2,17 @@
 /**
  * Custom header setup.
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-add_action( 'after_setup_theme', 'myportfolio_custom_header_setup' );
+add_action( 'after_setup_theme', 'sosa_custom_header_setup' );
 
-if ( ! function_exists( 'myportfolio_custom_header_setup' ) ) {
-	function myportfolio_custom_header_setup() {
+if ( ! function_exists( 'sosa_custom_header_setup' ) ) {
+	function sosa_custom_header_setup() {
 
 		/**
 		 * Filter UnderStrap custom-header support arguments.
@@ -34,7 +34,7 @@ if ( ! function_exists( 'myportfolio_custom_header_setup' ) ) {
 		add_theme_support(
 			'custom-header',
 			apply_filters(
-				'myportfolio_custom_header_args',
+				'sosa_custom_header_args',
 				array(
 					'default-image' => get_parent_theme_file_uri( '/img/header.jpg' ),
 					'width'         => 2000,
@@ -49,7 +49,7 @@ if ( ! function_exists( 'myportfolio_custom_header_setup' ) ) {
 				'default-image' => array(
 					'url'           => '%s/img/header.jpg',
 					'thumbnail_url' => '%s/img/header.jpg',
-					'description'   => __( 'Default Header Image', 'myportfolio' ),
+					'description'   => __( 'Default Header Image', 'sosa' ),
 				),
 			)
 		);

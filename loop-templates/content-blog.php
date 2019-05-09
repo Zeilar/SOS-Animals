@@ -2,7 +2,7 @@
 /**
  * Single post partial template.
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="entry-meta text-muted pl-1 pr-1">
 
-			<?php myportfolio_posted_on(); ?>
+			<?php sosa_posted_on(); ?>
 
 		</div> <!-- entry-meta -->
 
@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<footer class="entry-footer">
 
-		<?php myportfolio_entry_footer(); ?>
+		<?php sosa_entry_footer(); ?>
 
 	</footer> <!-- entry-footer -->
 

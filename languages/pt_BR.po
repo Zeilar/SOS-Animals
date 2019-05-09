@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: myportfolio\n"
+"Project-Id-Version: sosa\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2015-09-01 21:23+0200\n"
 "PO-Revision-Date: Thu Apr 14 2016 20:58:56 GMT-0300 (E. South America "
@@ -431,8 +431,8 @@ msgid "UnderStrap"
 msgstr "UnderStrap"
 
 #. Theme URI of the theme
-msgid "http://myportfolio.com"
-msgstr "http://myportfolio.com"
+msgid "http://sosa.com"
+msgstr "http://sosa.com"
 
 #. Description of the theme
 msgid ""

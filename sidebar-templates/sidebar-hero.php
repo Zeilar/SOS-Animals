@@ -2,7 +2,7 @@
 /**
  * Sidebar - hero setup.
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 
-			<span class="sr-only"><?php esc_html_e( 'Previous', 'myportfolio' ); ?></span>
+			<span class="sr-only"><?php esc_html_e( 'Previous', 'sosa' ); ?></span>
 
 		</a>
 
@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
 
-			<span class="sr-only"><?php esc_html_e( 'Next', 'myportfolio' ); ?></span>
+			<span class="sr-only"><?php esc_html_e( 'Next', 'sosa' ); ?></span>
 
 		</a>
 

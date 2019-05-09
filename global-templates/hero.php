@@ -2,7 +2,7 @@
 /**
  * Hero setup.
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

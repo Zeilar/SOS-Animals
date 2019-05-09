@@ -1,5 +1,5 @@
 {
-    "name": "holger1411/myportfolio",
+    "name": "holger1411/sosa",
     "description": "Combines Automattic´s Underscores Starter Theme and Bootstrap 4",
     "type": "wordpress-theme",
     "license": "GPL-2.0",
@@ -7,5 +7,5 @@
     "require": {"composer/installers": "^1.5",
         "wp-cli/wp-cli-bundle": "^2.2"},
     "keywords": ["wordpress","theme","bootstrap"],
-    "homepage": "https://github.com/holger1411/myportfolio"
+    "homepage": "https://github.com/holger1411/sosa"
 }

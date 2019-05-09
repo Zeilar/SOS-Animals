@@ -2,7 +2,7 @@
 /**
  * Declaring widgets
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -15,9 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @link https://developer.wordpress.org/reference/hooks/dynamic_sidebar_params/
  */
-add_filter( 'dynamic_sidebar_params', 'myportfolio_widget_classes' );
+add_filter( 'dynamic_sidebar_params', 'sosa_widget_classes' );
 
-if ( ! function_exists( 'myportfolio_widget_classes' ) ) {
+if ( ! function_exists( 'sosa_widget_classes' ) ) {
 	/**
 	 * Count number of visible widgets in a sidebar and add classes to widgets accordingly,
 	 * so widgets can be displayed one, two, three or four per row.
@@ -47,7 +47,7 @@ if ( ! function_exists( 'myportfolio_widget_classes' ) ) {
 	 * }
 	 * @return array $params
 	 */
-	function myportfolio_widget_classes( $params ) {
+	function sosa_widget_classes( $params ) {
 
 		global $sidebars_widgets;
 
@@ -87,20 +87,20 @@ if ( ! function_exists( 'myportfolio_widget_classes' ) ) {
 		return $params;
 
 	}
-} // endif function_exists( 'myportfolio_widget_classes' ).
+} // endif function_exists( 'sosa_widget_classes' ).
 
-add_action( 'widgets_init', 'myportfolio_widgets_init' );
+add_action( 'widgets_init', 'sosa_widgets_init' );
 
-if ( ! function_exists( 'myportfolio_widgets_init' ) ) {
+if ( ! function_exists( 'sosa_widgets_init' ) ) {
 	/**
 	 * Initializes themes widgets.
 	 */
-	function myportfolio_widgets_init() {
+	function sosa_widgets_init() {
 		register_sidebar(
 			array(
-				'name'          => __( 'Right Sidebar', 'myportfolio' ),
+				'name'          => __( 'Right Sidebar', 'sosa' ),
 				'id'            => 'right-sidebar',
-				'description'   => __( 'Right sidebar widget area', 'myportfolio' ),
+				'description'   => __( 'Right sidebar widget area', 'sosa' ),
 				'before_widget' => '<aside class="pb-4 pt-4 border-bottom" id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -110,9 +110,9 @@ if ( ! function_exists( 'myportfolio_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Left Sidebar', 'myportfolio' ),
+				'name'          => __( 'Left Sidebar', 'sosa' ),
 				'id'            => 'left-sidebar',
-				'description'   => __( 'Left sidebar widget area', 'myportfolio' ),
+				'description'   => __( 'Left sidebar widget area', 'sosa' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -122,9 +122,9 @@ if ( ! function_exists( 'myportfolio_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Hero Slider', 'myportfolio' ),
+				'name'          => __( 'Hero Slider', 'sosa' ),
 				'id'            => 'hero',
-				'description'   => __( 'Hero slider area. Place two or more widgets here and they will slide!', 'myportfolio' ),
+				'description'   => __( 'Hero slider area. Place two or more widgets here and they will slide!', 'sosa' ),
 				'before_widget' => '<div class="carousel-item">',
 				'after_widget'  => '</div>',
 				'before_title'  => '',
@@ -134,9 +134,9 @@ if ( ! function_exists( 'myportfolio_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Hero Canvas', 'myportfolio' ),
+				'name'          => __( 'Hero Canvas', 'sosa' ),
 				'id'            => 'herocanvas',
-				'description'   => __( 'Full size canvas hero area for Bootstrap and other custom HTML markup', 'myportfolio' ),
+				'description'   => __( 'Full size canvas hero area for Bootstrap and other custom HTML markup', 'sosa' ),
 				'before_widget' => '',
 				'after_widget'  => '',
 				'before_title'  => '',
@@ -146,9 +146,9 @@ if ( ! function_exists( 'myportfolio_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Top Full', 'myportfolio' ),
+				'name'          => __( 'Top Full', 'sosa' ),
 				'id'            => 'statichero',
-				'description'   => __( 'Full top widget with dynamic grid', 'myportfolio' ),
+				'description'   => __( 'Full top widget with dynamic grid', 'sosa' ),
 				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
 				'after_widget'  => '</div><!-- .static-hero-widget -->',
 				'before_title'  => '<h3 class="widget-title">',
@@ -158,9 +158,9 @@ if ( ! function_exists( 'myportfolio_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Footer Full', 'myportfolio' ),
+				'name'          => __( 'Footer Full', 'sosa' ),
 				'id'            => 'footerfull',
-				'description'   => __( 'Full sized footer widget with dynamic grid', 'myportfolio' ),
+				'description'   => __( 'Full sized footer widget with dynamic grid', 'sosa' ),
 				'before_widget' => '<div id="%1$s" class="footer-widget text-center %2$s dynamic-classes">',
 				'after_widget'  => '</div><!-- .footer-widget -->',
 				'before_title'  => '<h3 class="widget-title">',
@@ -169,4 +169,4 @@ if ( ! function_exists( 'myportfolio_widgets_init' ) ) {
 		);
 
 	}
-} // endif function_exists( 'myportfolio_widgets_init' ).
+} // endif function_exists( 'sosa_widgets_init' ).

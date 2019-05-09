@@ -4,7 +4,7 @@
 
         <img class="card-image rounded-top" src="<?php the_field('dog_image'); ?>">
 
-        <a href="<?php the_permalink(); ?>" class="btn btn-outline-danger"><?php _e('Read More &raquo;', 'myportfolio'); ?></a>
+        <a href="<?php the_permalink(); ?>" class="btn btn-outline-danger"><?php _e('Read More &raquo;', 'sosa'); ?></a>
 
     </article> <!-- card -->
     

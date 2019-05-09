@@ -18,16 +18,16 @@ if ( ! defined( 'ABSPATH' ) ) {
  * See: https://jetpack.me/support/responsive-videos/
  */
 
-add_action( 'after_setup_theme', 'myportfolio_components_jetpack_setup' );
+add_action( 'after_setup_theme', 'sosa_components_jetpack_setup' );
 
-if ( ! function_exists( 'myportfolio_components_jetpack_setup' ) ) {
-	function myportfolio_components_jetpack_setup() {
+if ( ! function_exists( 'sosa_components_jetpack_setup' ) ) {
+	function sosa_components_jetpack_setup() {
 		// Add theme support for Infinite Scroll.
 		add_theme_support(
 			'infinite-scroll',
 			array(
 				'container' => 'main',
-				'render'    => 'myportfolio_components_infinite_scroll_render',
+				'render'    => 'sosa_components_infinite_scroll_render',
 				'footer'    => 'page',
 			)
 		);
@@ -46,8 +46,8 @@ if ( ! function_exists( 'myportfolio_components_jetpack_setup' ) ) {
  * Custom render function for Infinite Scroll.
  */
 
-if ( ! function_exists( 'myportfolio_components_infinite_scroll_render' ) ) {
-	function myportfolio_components_infinite_scroll_render() {
+if ( ! function_exists( 'sosa_components_infinite_scroll_render' ) ) {
+	function sosa_components_infinite_scroll_render() {
 		while ( have_posts() ) {
 			the_post();
 			if ( is_search() ) :
@@ -59,8 +59,8 @@ if ( ! function_exists( 'myportfolio_components_infinite_scroll_render' ) ) {
 	}
 }
 
-if ( ! function_exists( 'myportfolio_components_social_menu' ) ) {
-	function myportfolio_components_social_menu() {
+if ( ! function_exists( 'sosa_components_social_menu' ) ) {
+	function sosa_components_social_menu() {
 		if ( ! function_exists( 'jetpack_social_menu' ) ) {
 			return;
 		} else {

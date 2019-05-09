@@ -4,7 +4,7 @@
  *
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -16,10 +16,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @global array $themecolors
  */
-add_action( 'after_setup_theme', 'myportfolio_wpcom_setup' );
+add_action( 'after_setup_theme', 'sosa_wpcom_setup' );
 
-if ( ! function_exists( 'myportfolio_wpcom_setup' ) ) {
-	function myportfolio_wpcom_setup() {
+if ( ! function_exists( 'sosa_wpcom_setup' ) ) {
+	function sosa_wpcom_setup() {
 		global $themecolors;
 
 		// Set theme colors for third party services.
@@ -42,10 +42,10 @@ if ( ! function_exists( 'myportfolio_wpcom_setup' ) ) {
 /*
  * WordPress.com-specific styles
  */
-add_action( 'wp_enqueue_scripts', 'myportfolio_wpcom_styles' );
+add_action( 'wp_enqueue_scripts', 'sosa_wpcom_styles' );
 
-if ( ! function_exists( 'myportfolio_wpcom_styles' ) ) {
-	function myportfolio_wpcom_styles() {
-		wp_enqueue_style( 'myportfolio-wpcom', get_template_directory_uri() . '/inc/style-wpcom.css', array(), '20160411' );
+if ( ! function_exists( 'sosa_wpcom_styles' ) ) {
+	function sosa_wpcom_styles() {
+		wp_enqueue_style( 'sosa-wpcom', get_template_directory_uri() . '/inc/style-wpcom.css', array(), '20160411' );
 	}
 }

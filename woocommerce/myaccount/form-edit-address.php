@@ -17,7 +17,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$page_title = ( 'billing' === $load_address ) ? __( 'Billing address', 'myportfolio' ) : __( 'Shipping address', 'myportfolio' );
+$page_title = ( 'billing' === $load_address ) ? __( 'Billing address', 'sosa' ) : __( 'Shipping address', 'sosa' );
 
 do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 
@@ -46,7 +46,7 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 			<?php do_action( "woocommerce_after_edit_address_form_{$load_address}" ); ?>
 
 			<p>
-				<button type="submit" class="btn btn-outline-primary" name="save_address" value="<?php esc_attr_e( 'Save address', 'myportfolio' ); ?>"><?php esc_html_e( 'Save address', 'myportfolio' ); ?></button>
+				<button type="submit" class="btn btn-outline-primary" name="save_address" value="<?php esc_attr_e( 'Save address', 'sosa' ); ?>"><?php esc_html_e( 'Save address', 'sosa' ); ?></button>
 				<?php wp_nonce_field( 'woocommerce-edit_address', 'woocommerce-edit-address-nonce' ); ?>
 				<input type="hidden" name="action" value="edit_address" />
 			</p>

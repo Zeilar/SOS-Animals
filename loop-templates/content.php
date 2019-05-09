@@ -2,7 +2,7 @@
 /**
  * Post rendering content according to caller of get_template_part.
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<div class="entry-meta pl-1 pr-1">
 
-				<?php myportfolio_posted_on(); ?>
+				<?php sosa_posted_on(); ?>
 
 			</div> <!-- entry-meta -->
 
@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php if (get_field('dog_image')) { ?> <!-- load dog image if possible -->
 
-		<img class="img-fluid dog-image mx-auto mb-3 mt-3 pl-1" src="<?php the_field('dog_image'); ?>" alt="<?php _e('Dog image', 'myportfolio'); ?>">
+		<img class="img-fluid dog-image mx-auto mb-3 mt-3 pl-1" src="<?php the_field('dog_image'); ?>" alt="<?php _e('Dog image', 'sosa'); ?>">
 
 	<?php } else { ?>	
 
@@ -51,7 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			wp_link_pages(
 				[
-					'before' => '<div class="page-links">' . __( 'Pages:', 'myportfolio' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'sosa' ),
 					'after'  => '</div>',
 				]
 			);
@@ -62,7 +62,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<footer class="entry-footer">
 
-		<?php myportfolio_entry_footer(); ?>
+		<?php sosa_entry_footer(); ?>
 
 	</footer> <!-- entry-footer -->
 

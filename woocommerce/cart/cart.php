@@ -27,10 +27,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<tr>
 				<th class="product-remove">&nbsp;</th>
 				<th class="product-thumbnail">&nbsp;</th>
-				<th class="product-name"><?php esc_html_e( 'Product', 'myportfolio' ); ?></th>
-				<th class="product-price"><?php esc_html_e( 'Price', 'myportfolio' ); ?></th>
-				<th class="product-quantity"><?php esc_html_e( 'Quantity', 'myportfolio' ); ?></th>
-				<th class="product-subtotal"><?php esc_html_e( 'Total', 'myportfolio' ); ?></th>
+				<th class="product-name"><?php esc_html_e( 'Product', 'sosa' ); ?></th>
+				<th class="product-price"><?php esc_html_e( 'Price', 'sosa' ); ?></th>
+				<th class="product-quantity"><?php esc_html_e( 'Quantity', 'sosa' ); ?></th>
+				<th class="product-subtotal"><?php esc_html_e( 'Total', 'sosa' ); ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -52,7 +52,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 								echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
 									'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
 									esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
-									__( 'Remove this item', 'myportfolio' ),
+									__( 'Remove this item', 'sosa' ),
 									esc_attr( $product_id ),
 									esc_attr( $_product->get_sku() )
 								), $cart_item_key );
@@ -71,7 +71,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 						</td>
 
-						<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'myportfolio' ); ?>">
+						<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'sosa' ); ?>">
 						<?php
 						if ( ! $product_permalink ) {
 							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
@@ -86,18 +86,18 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						// Backorder notification.
 						if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
-							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'myportfolio' ) . '</p>', $product_id ) );
+							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'sosa' ) . '</p>', $product_id ) );
 						}
 						?>
 						</td>
 
-						<td class="product-price" data-title="<?php esc_attr_e( 'Price', 'myportfolio' ); ?>">
+						<td class="product-price" data-title="<?php esc_attr_e( 'Price', 'sosa' ); ?>">
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
 							?>
 						</td>
 
-						<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'myportfolio' ); ?>">
+						<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'sosa' ); ?>">
 						<?php
 						if ( $_product->is_sold_individually() ) {
 							$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
@@ -115,7 +115,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 						</td>
 
-						<td class="product-subtotal" data-title="<?php esc_attr_e( 'Total', 'myportfolio' ); ?>">
+						<td class="product-subtotal" data-title="<?php esc_attr_e( 'Total', 'sosa' ); ?>">
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
 							?>
@@ -133,12 +133,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 					<?php if ( wc_coupons_enabled() ) { ?>
 						<div class="coupon">
-							<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'myportfolio' ); ?></label> <input type="text" name="coupon_code" class="input-text form-control" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'myportfolio' ); ?>" /> <button type="submit" class="btn btn-outline-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'myportfolio' ); ?>"><?php esc_attr_e( 'Apply coupon', 'myportfolio' ); ?></button>
+							<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'sosa' ); ?></label> <input type="text" name="coupon_code" class="input-text form-control" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'sosa' ); ?>" /> <button type="submit" class="btn btn-outline-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'sosa' ); ?>"><?php esc_attr_e( 'Apply coupon', 'sosa' ); ?></button>
 							<?php do_action( 'woocommerce_cart_coupon' ); ?>
 						</div>
 					<?php } ?>
 
-					<button type="submit" class="btn btn-outline-primary" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'myportfolio' ); ?>"><?php esc_html_e( 'Update cart', 'myportfolio' ); ?></button>
+					<button type="submit" class="btn btn-outline-primary" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'sosa' ); ?>"><?php esc_html_e( 'Update cart', 'sosa' ); ?></button>
 
 					<?php do_action( 'woocommerce_cart_actions' ); ?>
 

@@ -168,7 +168,7 @@
               - Update prefixes
               - Remove automatically db updates by theme
               - Rename and streamline functions
-              - Changing WooCommerce text domain to "myportfolio"
+              - Changing WooCommerce text domain to "sosa"
               - Disable theme-settings.php call
               - Remove jQuery 3.2.1 slim and switch back to WP core jQuery version
               - Update Bootstrap 4 Beta 2 to commit which fixes jQuery conflict

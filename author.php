@@ -2,7 +2,7 @@
 /**
  * The template for displaying the author pages.
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
-$container = get_theme_mod( 'myportfolio_container_type' );
+$container = get_theme_mod( 'sosa_container_type' );
 ?>
 
 <div class="wrapper" id="author-wrapper">
@@ -34,20 +34,20 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 					<h2 class="pl-1"><?php echo $curauth->nickname ?></h2>
 
 					<?php if ( ! empty( $curauth->ID ) ) : ?>
-						<?php echo get_avatar($curauth->ID, $size, $default, __('Avatar', 'myportfolio'), ['class' => 'pl-1 pb-1']); ?>
+						<?php echo get_avatar($curauth->ID, $size, $default, __('Avatar', 'sosa'), ['class' => 'pl-1 pb-1']); ?>
 					<?php endif; ?>
 
 					<?php if ( ! empty( $curauth->user_url ) || ! empty( $curauth->user_description ) ) : ?>
 						<dl>
 							<?php if ( ! empty( $curauth->user_url ) ) : ?>
-								<dt><?php esc_html_e( 'Website', 'myportfolio' ); ?></dt>
+								<dt><?php esc_html_e( 'Website', 'sosa' ); ?></dt>
 								<dd>
 									<a href="<?php echo esc_url( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a>
 								</dd>
 							<?php endif; ?>
 
 							<?php if ( ! empty( $curauth->user_description ) ) : ?>
-								<dt><?php esc_html_e( 'Profile', 'myportfolio' ); ?></dt>
+								<dt><?php esc_html_e( 'Profile', 'sosa' ); ?></dt>
 								<dd><?php esc_html_e( $curauth->user_description ); ?></dd>
 							<?php endif; ?>
 						</dl>
@@ -69,7 +69,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 				<?php endif; ?>
 
-			<?php myportfolio_pagination(); ?>
+			<?php sosa_pagination(); ?>
 
 			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 

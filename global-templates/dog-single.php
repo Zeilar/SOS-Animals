@@ -99,7 +99,7 @@ if ($age->y && $age->m && $age->d) {
                 
                 <h1 class="text-center border-bottom pb-2 pt-2"><?php the_title(); ?></h1>
                 
-                <img class="img-fluid dog-image px-2 px-md-0 mx-md-auto mb-2 mt-2 d-block" src="<?php the_field('dog_image'); ?>" alt="<?php _e('Dog image', 'myportfolio'); ?>">
+                <img class="img-fluid dog-image px-2 px-md-0 mx-md-auto mb-2 mt-2 d-block" src="<?php the_field('dog_image'); ?>" alt="<?php _e('Dog image', 'sosa'); ?>">
                 
                 <div class="dog-single-content px-2 pt-2 pb-2">
                     
@@ -115,13 +115,13 @@ if ($age->y && $age->m && $age->d) {
 
                         <div class="append-area border-right">
 
-                            <p class="text-center dog-age mb-0 px-2 pt-2 pb-2"><?php _e('Sex', 'myportfolio'); ?></p>
+                            <p class="text-center dog-age mb-0 px-2 pt-2 pb-2"><?php _e('Sex', 'sosa'); ?></p>
 
                         </div> <!-- append-area -->
                         
                         <div class="field-area">
 
-                            <p class="dog-age mb-0 px-2 pt-2 pb-2"><?php _e(ucfirst(get_field('dog_sex')), 'myportfolio'); ?></p>
+                            <p class="dog-age mb-0 px-2 pt-2 pb-2"><?php _e(ucfirst(get_field('dog_sex')), 'sosa'); ?></p>
 
                         </div> <!-- field-area -->
 
@@ -131,13 +131,13 @@ if ($age->y && $age->m && $age->d) {
 
                         <div class="append-area border-right">
 
-                            <p class="text-center dog-age mb-0 px-2 pt-2 pb-2"><?php _e('Age', 'myportfolio'); ?></p>
+                            <p class="text-center dog-age mb-0 px-2 pt-2 pb-2"><?php _e('Age', 'sosa'); ?></p>
 
                         </div> <!-- append-area -->
                         
                         <div class="field-area">
 
-                            <p class="dog-age mb-0 px-2 pt-2 pb-2"><?php _e($age, 'myportfolio'); ?> (<?php _e(the_field('dog_birth_date'), 'myportfolio'); ?>)</p>
+                            <p class="dog-age mb-0 px-2 pt-2 pb-2"><?php _e($age, 'sosa'); ?> (<?php _e(the_field('dog_birth_date'), 'sosa'); ?>)</p>
                       
                         </div> <!-- field-area -->
 
@@ -147,7 +147,7 @@ if ($age->y && $age->m && $age->d) {
 
                         <div class="append-area border-right">
 
-                            <p class="text-center dog-withers mb-0 px-2 pt-2 pb-2"><?php _e('Withers', 'myportfolio'); ?></p>
+                            <p class="text-center dog-withers mb-0 px-2 pt-2 pb-2"><?php _e('Withers', 'sosa'); ?></p>
 
                         </div> <!-- append-area -->
                         
@@ -163,7 +163,7 @@ if ($age->y && $age->m && $age->d) {
 
                         <div class="append-area border-right">
 
-                            <p class="text-center dog-weight mb-0 px-2 pt-2 pb-2"><?php _e('Weight', 'myportfolio'); ?></p>
+                            <p class="text-center dog-weight mb-0 px-2 pt-2 pb-2"><?php _e('Weight', 'sosa'); ?></p>
 
                         </div> <!-- append-area -->
                         
@@ -185,13 +185,13 @@ if ($age->y && $age->m && $age->d) {
 
                         <div class="append-area border-right">
 
-                            <p class="text-center dog-age mb-0 px-2 pt-2 pb-2"><?php _e('Adopted', 'myportfolio'); ?></p>
+                            <p class="text-center dog-age mb-0 px-2 pt-2 pb-2"><?php _e('Adopted', 'sosa'); ?></p>
 
                         </div> <!-- append-area -->
                         
                         <div class="field-area">
 
-                            <p class="dog-age mb-0 px-2 pt-2 pb-2"><?php _e(ucfirst(get_field('dog_adoption_date')), 'myportfolio'); ?></p>
+                            <p class="dog-age mb-0 px-2 pt-2 pb-2"><?php _e(ucfirst(get_field('dog_adoption_date')), 'sosa'); ?></p>
 
                         </div> <!-- field-area -->
 
@@ -207,7 +207,7 @@ if ($age->y && $age->m && $age->d) {
 
                 <div class="tags-list pl-1 pr-1">
 
-                    <?php __(the_tags(), 'myportfolio'); ?>
+                    <?php __(the_tags(), 'sosa'); ?>
 
                 </div> <!-- tags-list -->
 

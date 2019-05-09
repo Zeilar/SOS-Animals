@@ -2,7 +2,7 @@
 /**
  * Sidebar - hero canvas setup.
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

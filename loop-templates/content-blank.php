@@ -2,7 +2,7 @@
 /**
  * Blank content partial template.
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

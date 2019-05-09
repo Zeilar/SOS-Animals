@@ -24,5 +24,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="btn btn-primary btn-lg btn-block">
-	<?php esc_html_e( 'Proceed to checkout', 'myportfolio' ); ?>
+	<?php esc_html_e( 'Proceed to checkout', 'sosa' ); ?>
 </a>

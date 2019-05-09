@@ -2,14 +2,14 @@
 /**
  * Static hero sidebar setup.
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$container = get_theme_mod( 'myportfolio_container_type' );
+$container = get_theme_mod( 'sosa_container_type' );
 ?>
 
 <?php if ( is_active_sidebar( 'statichero' ) ) : ?>

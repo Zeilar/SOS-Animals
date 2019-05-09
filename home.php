@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
-$container = get_theme_mod( 'myportfolio_container_type' );
+$container = get_theme_mod( 'sosa_container_type' );
 ?>
 
 <div class="wrapper" id="blog-wrapper">
@@ -23,7 +23,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 			<header class="page-header border">
 
-                <h1 class="pl-1 pr-1"><?php _e('Blog', 'myportfolio'); ?></h1>
+                <h1 class="pl-1 pr-1"><?php _e('Blog', 'sosa'); ?></h1>
 
             </header>
 
@@ -37,7 +37,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
         </div> <!-- row -->
         
-        <?php myportfolio_pagination(); ?>
+        <?php sosa_pagination(); ?>
 
     </div> <!-- content -->
 

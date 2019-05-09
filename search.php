@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$container = get_theme_mod( 'myportfolio_container_type' );
+$container = get_theme_mod( 'sosa_container_type' );
 
 ?>
 
@@ -31,7 +31,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 								<?php
 									printf(
 										/* translators: %s: query term */
-										esc_html__( 'Search Results for: %s', 'myportfolio' ),
+										esc_html__( 'Search Results for: %s', 'sosa' ),
 										'<span>' . get_search_query() . '</span>'
 									);
 								?>
@@ -51,7 +51,7 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 				<?php endif; ?>
 
-			<?php myportfolio_pagination(); ?>
+			<?php sosa_pagination(); ?>
 
 			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 

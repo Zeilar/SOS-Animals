@@ -6,7 +6,7 @@
 
 		<div class="entry-meta text-muted pl-1 pr-1">
 
-			<?php myportfolio_posted_on(); ?>
+			<?php sosa_posted_on(); ?>
 
 		</div> <!-- entry-meta -->
 
@@ -22,7 +22,7 @@
 
 	<footer class="entry-footer">
 
-		<?php myportfolio_entry_footer(); ?>
+		<?php sosa_entry_footer(); ?>
 
 	</footer> <!-- entry-footer -->
 

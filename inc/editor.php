@@ -2,7 +2,7 @@
 /**
  * Understrap modify editor
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,19 +13,19 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Registers an editor stylesheet for the theme.
  */
 
-add_action( 'admin_init', 'myportfolio_wpdocs_theme_add_editor_styles' );
+add_action( 'admin_init', 'sosa_wpdocs_theme_add_editor_styles' );
 
-if ( ! function_exists( 'myportfolio_wpdocs_theme_add_editor_styles' ) ) {
-	function myportfolio_wpdocs_theme_add_editor_styles() {
+if ( ! function_exists( 'sosa_wpdocs_theme_add_editor_styles' ) ) {
+	function sosa_wpdocs_theme_add_editor_styles() {
 		add_editor_style( 'css/custom-editor-style.min.css' );
 	}
 }
 
 // Add TinyMCE style formats.
-add_filter( 'mce_buttons_2', 'myportfolio_tiny_mce_style_formats' );
+add_filter( 'mce_buttons_2', 'sosa_tiny_mce_style_formats' );
 
-if ( ! function_exists( 'myportfolio_tiny_mce_style_formats' ) ) {
-	function myportfolio_tiny_mce_style_formats( $styles ) {
+if ( ! function_exists( 'sosa_tiny_mce_style_formats' ) ) {
+	function sosa_tiny_mce_style_formats( $styles ) {
 
 		array_unshift( $styles, 'styleselect' );
 		return $styles;
@@ -33,10 +33,10 @@ if ( ! function_exists( 'myportfolio_tiny_mce_style_formats' ) ) {
 }
 
 
-add_filter( 'tiny_mce_before_init', 'myportfolio_tiny_mce_before_init' );
+add_filter( 'tiny_mce_before_init', 'sosa_tiny_mce_before_init' );
 
-if ( ! function_exists( 'myportfolio_tiny_mce_before_init' ) ) {
-	function myportfolio_tiny_mce_before_init( $settings ) {
+if ( ! function_exists( 'sosa_tiny_mce_before_init' ) ) {
+	function sosa_tiny_mce_before_init( $settings ) {
 
 		$style_formats = array(
 			array(

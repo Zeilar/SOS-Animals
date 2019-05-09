@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$container = get_theme_mod( 'myportfolio_container_type' );
+$container = get_theme_mod( 'sosa_container_type' );
 ?>
 
 <div class="wrapper" id="error-404-wrapper">
@@ -26,13 +26,13 @@ $container = get_theme_mod( 'myportfolio_container_type' );
 
 					<header class="page-header">
 
-						<h1 class="page-title"><?php esc_html_e( 'Oops 404', 'myportfolio' ); ?></h1>
+						<h1 class="page-title"><?php esc_html_e( 'Oops 404', 'sosa' ); ?></h1>
 
 					</header> <!-- page-header -->
 
 					<div class="page-content">
 
-						<p><?php _e('The page could not be found.', 'myportfolio'); ?></p>
+						<p><?php _e('The page could not be found.', 'sosa'); ?></p>
 
 						<div class="widget widget_categories">
 

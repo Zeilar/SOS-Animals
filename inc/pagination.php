@@ -2,16 +2,16 @@
 /**
  * Pagination layout.
  *
- * @package myportfolio
+ * @package sosa
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( ! function_exists( 'myportfolio_pagination' ) ) {
+if ( ! function_exists( 'sosa_pagination' ) ) {
 
-	function myportfolio_pagination( $args = array(), $class = 'pagination' ) {
+	function sosa_pagination( $args = array(), $class = 'pagination' ) {
 
 		if ( $GLOBALS['wp_query']->max_num_pages <= 1 ) {
 			return;
@@ -22,9 +22,9 @@ if ( ! function_exists( 'myportfolio_pagination' ) ) {
 			array(
 				'mid_size'           => 2,
 				'prev_next'          => true,
-				'prev_text'          => __( '&laquo; Newer', 'myportfolio' ),
-				'next_text'          => __( 'Older &raquo;', 'myportfolio' ),
-				'screen_reader_text' => __( 'Posts navigation', 'myportfolio' ),
+				'prev_text'          => __( '&laquo; Newer', 'sosa' ),
+				'next_text'          => __( 'Older &raquo;', 'sosa' ),
+				'screen_reader_text' => __( 'Posts navigation', 'sosa' ),
 				'type'               => 'array',
 				'current'            => max( 1, get_query_var( 'paged' ) ),
 			)

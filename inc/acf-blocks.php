@@ -10,7 +10,7 @@ function register_acf_blocks() {
 	acf_register_block(array(
 		'name'              => 'Hero',
 		'title'             => 'Hero',
-		'description'       => __('Put a nice hero on the top of your page!', 'myportfolio'),
+		'description'       => __('Put a nice hero on the top of your page!', 'sosa'),
 		'render_template'   => 'loop-templates/block/hero.php',
 		'category'          => 'formatting',
 		'icon'              => 'admin-comments',
@@ -21,7 +21,7 @@ function register_acf_blocks() {
 	acf_register_block(array(
 		'name'              => 'FAS',
 		'title'             => 'Font Awesome',
-		'description'       => __('Add any Font Awesome icon you like!', 'myportfolio'),
+		'description'       => __('Add any Font Awesome icon you like!', 'sosa'),
 		'render_template'   => 'loop-templates/block/fas.php',
 		'category'          => 'formatting',
 		'icon'              => 'admin-comments',

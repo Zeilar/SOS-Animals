@@ -21,7 +21,7 @@ if (!$contact_form_id) {
 
         <div class="wrapper" id="contact-form-wrapper">
 
-            <?php __(the_field('contact_form_shortcode'), 'myportfolio'); ?>
+            <?php __(the_field('contact_form_shortcode'), 'sosa'); ?>
 
         </div> <!-- contact-form-wrapper -->
 
