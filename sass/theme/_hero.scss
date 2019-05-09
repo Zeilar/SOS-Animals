@@ -12,9 +12,16 @@
            
             height: 40rem;
 
-            @media screen and (max-width: 767px) {
+            @include media-breakpoint-down(sm) {
 
                 height: 15rem;
+
+                .display-3, .display-4 {
+
+                    font-size: 1.5rem;
+
+                    font-weight: 400;
+                }
             }
         }
     }
