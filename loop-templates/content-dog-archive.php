@@ -28,10 +28,16 @@ $sexes = get_the_terms(get_the_ID(), 'sex');
                 
                 <?php foreach ($sexes as $sex) { ?>
 
+                    <span class="taxonomy">
+                    
+                        <a class="fa fa-tag" href="/sex/<?php echo lcfirst($sex->name); ?>">
+                        
+                            <?php _e($sex->name, 'sosa') ?>
+                        
+                        </a> <!-- taxonomy link -->
+                    
+                    </span> <!-- taxonomy -->
 
-                        <span class="taxonomy">
-                    <a class="fa fa-tag" href="/sex/<?php echo lcfirst($sex->name); ?>"><?php _e($sex->name, 'sosa') ?></a> <!-- taxonomy link -->
-</span>
                 <?php } ?> <!-- foreach -->
 
             </li> <!-- list-group-item -->
