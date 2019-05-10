@@ -1,14 +1,14 @@
 <?php 
 
-$taxomonies = get_the_terms(get_the_ID(), 'sex');
+$sexes = get_the_terms(get_the_ID(), 'sex');
 
 ?>
 
 <div class="col-lg-4 col-md-6 mt-4 d-flex justify-content-center <?php
 
-    foreach ($taxomonies as $taxonomy) {
+    foreach ($sexes as $sex) {
 
-        echo lcfirst($taxonomy->name);
+        echo lcfirst($sex->name);
     } 
     ?>">
 
@@ -26,14 +26,12 @@ $taxomonies = get_the_terms(get_the_ID(), 'sex');
             
             <li class="list-group-item">
                 
-                <?php foreach ($taxomonies as $taxonomy) { ?>
+                <?php foreach ($sexes as $sex) { ?>
 
-                    <a class="pl-2 mr-3" href="/sex/<?php echo lcfirst($taxonomy->name); ?>"><?php _e($taxonomy->name, 'sosa') ?>
 
-                        <span class="pl-2 pr-1 fa fa-tag"></span>
-
-                    </a> <!-- taxonomy link -->
-
+                        <span class="taxonomy">
+                    <a class="fa fa-tag" href="/sex/<?php echo lcfirst($sex->name); ?>"><?php _e($sex->name, 'sosa') ?></a> <!-- taxonomy link -->
+</span>
                 <?php } ?> <!-- foreach -->
 
             </li> <!-- list-group-item -->
