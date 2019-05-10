@@ -1,6 +1,7 @@
 <?php 
 
 $country = get_the_terms(get_the_ID(), 'country');
+$sexes = get_the_terms(get_the_ID(), 'sex');
 
 $birth = get_field('dog_birth_date', false, false); 
 
@@ -93,7 +94,14 @@ $age = $years . $months . $days;
                         
                         <div class="field-area">
 
-                            <p class="dog-age mb-0 px-2 pt-2 pb-2"><?php _e(ucfirst(get_field('dog_sex')), 'sosa'); ?></p>
+                            <p class="dog-age mb-0 px-2 pt-2 pb-2"><?php
+                            
+                            foreach ($sexes as $sex) {
+
+                                echo $sex->name;
+                            }
+                            
+                            ?></p>
 
                         </div> <!-- field-area -->
 
