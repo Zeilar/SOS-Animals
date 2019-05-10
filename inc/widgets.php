@@ -108,6 +108,18 @@ if ( ! function_exists( 'sosa_widgets_init' ) ) {
 			)
 		);
 
+        register_sidebar(
+			array(
+				'name'          => __( 'Right Sidebar Dog', 'sosa' ),
+				'id'            => 'right-sidebar-dog',
+				'description'   => __( 'Right sidebar dog widget area', 'sosa' ),
+				'before_widget' => '<aside class="pb-4 pt-4 border-bottom" id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
+
 		register_sidebar(
 			array(
 				'name'          => __( 'Left Sidebar', 'sosa' ),

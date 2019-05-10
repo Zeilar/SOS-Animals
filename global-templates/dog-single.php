@@ -193,7 +193,7 @@ $age = $years . $months . $days;
 
         </div> <!-- primary -->
 
-    <?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
+    <?php get_template_part( 'sidebar-templates/sidebar', 'right-dog' ); ?>
 
     </div> <!-- row -->
 
