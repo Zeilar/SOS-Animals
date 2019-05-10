@@ -41,7 +41,7 @@ foreach ( $understrap_includes as $file ) {
 	require_once $filepath;
 }
 
-function my_cptui_add_post_types_to_archives( $query ) { // this adds Custom Post Types into the WP category system
+/*function my_cptui_add_post_types_to_archives( $query ) { // this adds Custom Post Types into the WP category system
 	// We do not want unintended consequences.
 	if ( is_admin() || ! $query->is_main_query() ) {
 		return;    
@@ -59,4 +59,4 @@ function my_cptui_add_post_types_to_archives( $query ) { // this adds Custom Pos
 		);
 	}
 }
-add_filter( 'pre_get_posts', 'my_cptui_add_post_types_to_archives' );
+add_filter( 'pre_get_posts', 'my_cptui_add_post_types_to_archives' );*/ // use this if you want to use categories/tags för CPT
