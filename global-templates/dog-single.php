@@ -23,7 +23,7 @@ if ($age->y > 1) {
 
 } else {
 
-    $years == null;
+    $years = null;
 }
 
 if ($age->m > 1) {
@@ -36,7 +36,7 @@ if ($age->m > 1) {
 
 } else {
 
-    $months = '';
+    $months = null;
     
 }
 
@@ -50,13 +50,12 @@ if ($age->d > 1) {
 
 } else {
 
-    $days == null;
+    $days = null;
 }
 
 // now the strings are prepared for the conditions below
 
 $age = $years . $months . $days;
-
 
 ?>
 
