@@ -36,7 +36,8 @@ if ($age->m > 1) {
 
 } else {
 
-    $months == null;
+    $months = '';
+    
 }
 
 if ($age->d > 1) {
@@ -54,38 +55,8 @@ if ($age->d > 1) {
 
 // now the strings are prepared for the conditions below
 
-if ($age->y && $age->m && $age->d) {
+$age = $years . $months . $days;
 
-    $age = $years . $months . $days;
-
-} elseif ($age->y && $age->m && !$age->d) {
-
-    $age = $years . $months;
-
-} elseif ($age->y && !$age->m && $age->d) {
-
-    $age = $years . $days;
-
-} elseif (!$age->y && $age->m && $age->d) {
-
-    $age = $months . $days;
-
-} elseif ($age->y && !$age->m && !$age->d) {
-
-    $age = $years;
-
-} elseif (!$age->y && !$age->m && $age->d ) {
-
-    $age = $days;
-
-} elseif (!$age->y && $age->m && !$age->d) {
-
-    $age = $months;
-
-} else {
-
-    $age = $years . $months . $days;
-}
 
 ?>
 
