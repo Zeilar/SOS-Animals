@@ -2,6 +2,8 @@
 
 $sexes = get_the_terms(get_the_ID(), 'sex');
 
+$country = get_the_terms(get_the_ID(), 'country');
+
 ?>
 
 <div class="col-lg-4 col-md-6 mt-4 d-flex justify-content-center <?php
