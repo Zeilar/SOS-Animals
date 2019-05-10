@@ -1,5 +1,7 @@
 <?php 
 
+$country = get_the_terms(get_the_ID(), 'country');
+
 $birth = get_field('dog_birth_date', false, false); 
 
 $birth = new DateTime($birth);
@@ -168,18 +170,6 @@ $age = $years . $months . $days;
                     </li> <!-- list-group-item -->
 
                 </ul> <!-- list-group -->
-
-                <div class="category-list pl-1 pr-1">
-
-                    <?php _e('Categories: ', 'myporfolio'); ?><?php the_category(', '); ?>
-
-                </div> <!-- category-list -->
-
-                <div class="tags-list pl-1 pr-1">
-
-                    <?php __(the_tags(), 'sosa'); ?>
-
-                </div> <!-- tags-list -->
 
                 <div class="posts-links pl-1 pr-1">
 
