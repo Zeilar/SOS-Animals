@@ -10,9 +10,9 @@
 
             <a class="btn btn-lg hero-button" href="<?php the_field('hero_button_url'); ?>">
 
-                <p><?php the_field('hero_button_text'); ?></p>
+                <p><?php the_field('hero_button_text') ?></p>
 
-            </a> <!-- heru-button -->
+            </a> <!-- hero-button -->
 
         <?php } ?> <!-- end of if -->
             
