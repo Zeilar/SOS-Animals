@@ -46,7 +46,7 @@ $countries = get_the_terms(get_the_ID(), 'country');
 
                 <span class="card-taxonomy">
 
-                    <a class="fa fa-tag card-taxonomy-link" href="/sosa.philipscave.com/size/<?php echo lcfirst($size->name); ?>">
+                    <a class="fa fa-tag card-taxonomy-link" href="sosa.philipscave.com/size/<?php echo lcfirst($size->name); ?>">
                     
                         <?php _e($size->name, 'sosa') ?>
                     
@@ -64,7 +64,7 @@ $countries = get_the_terms(get_the_ID(), 'country');
 
                 <span class="card-taxonomy">
 
-                    <a class="fa fa-tag card-taxonomy-link" href="sosa.philipscave.com/country/<?php echo lcfirst($country->name); ?>">
+                    <a class="fa fa-tag card-taxonomy-link" href="sosa.philipscave.com//<?php echo lcfirst($country->name); ?>">
                     
                         <?php _e($country->name, 'sosa') ?>
                     
