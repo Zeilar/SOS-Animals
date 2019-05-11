@@ -103,6 +103,9 @@ $age = $years . $months . $days;
                                     echo $sex->name;
                                 }
 
+                            } else {
+
+                                echo "N/A";
                             }
             
                             ?></p>
