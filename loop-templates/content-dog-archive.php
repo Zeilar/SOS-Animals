@@ -21,6 +21,8 @@ $countries = get_the_terms(get_the_ID(), 'country');
         <ul class="list-group list-group-flush">
             
             <li class="list-group-item">
+
+            <?php if ($sexes) { ?>
                 
                 <?php foreach ($sexes as $sex) { ?>
 
@@ -36,6 +38,10 @@ $countries = get_the_terms(get_the_ID(), 'country');
 
                 <?php } ?> <!-- foreach -->
 
+            <?php } ?> <!-- if -->
+
+            <?php if ($sizes) { ?>
+
                 <?php foreach ($sizes as $size) { ?>
 
                 <span class="card-taxonomy">
@@ -49,6 +55,26 @@ $countries = get_the_terms(get_the_ID(), 'country');
                 </span> <!-- taxonomy -->
 
                 <?php } ?> <!-- foreach -->
+
+            <?php } ?> <!-- if -->
+
+            <?php if ($countries) { ?>
+
+                <?php foreach ($countries as $country) { ?>
+
+                <span class="card-taxonomy">
+
+                    <a class="fa fa-tag card-taxonomy-link" href="/size/<?php echo lcfirst($country->name); ?>">
+                    
+                        <?php _e($country->name, 'sosa') ?>
+                    
+                    </a> <!-- taxonomy link -->
+
+                </span> <!-- taxonomy -->
+
+                <?php } ?> <!-- foreach -->
+
+            <?php } ?> <!-- if -->
 
             </li> <!-- list-group-item -->
 

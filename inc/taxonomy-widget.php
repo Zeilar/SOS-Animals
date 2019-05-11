@@ -52,9 +52,9 @@ $countries = get_terms([
 
 ?>
 
-<ul>
+<h2><?php _e('Categories', 'sosa'); ?></h2>
 
-    <h2><?php _e('Categories', 'sosa'); ?></h2>
+<ul class="widget-taxonomies">
 
     <h3 class="mt-3"><?php _e('Sexes', 'sosa'); ?></h3>
 
@@ -101,7 +101,7 @@ $countries = get_terms([
 
     </li> <!-- countries -->
 
-</ul>
+</ul> <!-- widget-taxonomies -->
 
 <?php
 
