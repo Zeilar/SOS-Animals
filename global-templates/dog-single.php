@@ -95,12 +95,16 @@ $age = $years . $months . $days;
                         <div class="field-area">
 
                             <p class="dog-age mb-0 px-2 pt-2 pb-2"><?php
-                            
-                            foreach ($sexes as $sex) {
 
-                                echo $sex->name;
-                            }
+                            if ($sexes) {
                             
+                                foreach ($sexes as $sex) {
+
+                                    echo $sex->name;
+                                }
+
+                            }
+            
                             ?></p>
 
                         </div> <!-- field-area -->
@@ -155,23 +159,28 @@ $age = $years . $months . $days;
 
                     </li> <!-- list-group-item -->
 
-                    <li class="list-group-item px-0 pt-0 pb-0 d-flex flex-row" style="<?php 
-                    
-                        if (!get_field('dog_adoption_date')) {
-
-                            echo 'display: none !important;'; 
-                        } 
-                        ?>">
+                    <li class="list-group-item px-0 pt-0 pb-0 d-flex flex-row">
 
                         <div class="append-area border-right">
 
-                            <p class="text-center dog-age mb-0 px-2 pt-2 pb-2"><?php _e('Adopted', 'sosa'); ?></p>
+                            <p class="text-center dog-age mb-0 px-2 pt-2 pb-2"><?php _e('Adopted', 'sosa');  ?></p>
 
                         </div> <!-- append-area -->
                         
                         <div class="field-area">
 
-                            <p class="dog-age mb-0 px-2 pt-2 pb-2"><?php _e(ucfirst(get_field('dog_adoption_date')), 'sosa'); ?></p>
+                            <p class="dog-age mb-0 px-2 pt-2 pb-2"><?php 
+                            
+                            if (get_field('dog_adoption_date')) { 
+                            
+                                _e(ucfirst(get_field('dog_adoption_date')), 'sosa');
+
+                            } else {
+                                
+                                _e('Not adopted', 'sosa'); 
+                            }
+                            
+                            ?></p> <!-- dog-age -->
 
                         </div> <!-- field-area -->
 
