@@ -21,7 +21,7 @@ $container = get_theme_mod( 'sosa_container_type' );
 
 			<div class="col-md col-lg-9 content-area" id="primary">
 
-            <?php if (have_posts()) { ?>
+            <?php if (have_posts()) : ?>
 
                 <header class="page-header border">
 
@@ -46,9 +46,13 @@ $container = get_theme_mod( 'sosa_container_type' );
                     
                 </div> <!-- row -->
 
-            <?php sosa_pagination(); ?>
+            <?php else : ?>
 
-            <?php } ?> <!-- if -->
+                <?php get_template_part('loop-templates/content', 'none'); ?>
+
+            <?php endif; ?>
+
+            <?php sosa_pagination(); ?>
 
 			</div> <!-- primary -->
 

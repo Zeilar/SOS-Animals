@@ -1,16 +1,12 @@
 <?php 
 
 $sexes = get_the_terms(get_the_ID(), 'sex');
+$sizes = get_the_terms(get_the_ID(), 'size');
+$countries = get_the_terms(get_the_ID(), 'country');
 
 ?>
 
-<div class="col-lg-4 col-md-6 mt-4 d-flex justify-content-center <?php
-
-    foreach ($sexes as $sex) {
-
-        echo lcfirst($sex->name);
-    } 
-    ?>">
+<div class="col-lg-4 col-md-6 mt-4 d-flex justify-content-center">
 
     <article class="card rounded-lg">
 
@@ -28,15 +24,29 @@ $sexes = get_the_terms(get_the_ID(), 'sex');
                 
                 <?php foreach ($sexes as $sex) { ?>
 
-                    <span class="taxonomy">
+                    <span class="card-taxonomy">
                     
-                        <a class="fa fa-tag" href="/sex/<?php echo lcfirst($sex->name); ?>">
+                        <a class="fa fa-tag card-taxonomy-link" href="/sex/<?php echo lcfirst($sex->name); ?>">
                         
                             <?php _e($sex->name, 'sosa') ?>
                         
                         </a> <!-- taxonomy link -->
                     
                     </span> <!-- taxonomy -->
+
+                <?php } ?> <!-- foreach -->
+
+                <?php foreach ($sizes as $size) { ?>
+
+                <span class="card-taxonomy">
+
+                    <a class="fa fa-tag card-taxonomy-link" href="/size/<?php echo lcfirst($size->name); ?>">
+                    
+                        <?php _e($size->name, 'sosa') ?>
+                    
+                    </a> <!-- taxonomy link -->
+
+                </span> <!-- taxonomy -->
 
                 <?php } ?> <!-- foreach -->
 

@@ -56,9 +56,7 @@ $countries = get_terms([
 
     <h2><?php _e('Categories', 'sosa'); ?></h2>
 
-    <br>
-
-    <h3><?php _e('Sexes', 'sosa'); ?></h3>
+    <h3 class="mt-3"><?php _e('Sexes', 'sosa'); ?></h3>
 
     <li class="sexes">
 
@@ -73,7 +71,7 @@ $countries = get_terms([
 
     </li> <!-- sexes -->
 
-    <h3><?php _e('Sizes', 'sosa'); ?></h3>
+    <h3 class="mt-3"><?php _e('Sizes', 'sosa'); ?></h3>
 
     <li class="sizes">
         
@@ -88,7 +86,7 @@ $countries = get_terms([
 
     </li> <!-- sizes -->
 
-    <h3><?php _e('Countries', 'sosa'); ?></h3>
+    <h3 class="mt-3"><?php _e('Countries', 'sosa'); ?></h3>
 
     <li class="countries">
         
@@ -96,7 +94,7 @@ $countries = get_terms([
         
             foreach ($countries as $country) {
 
-                _e('<a class="widget-taxonomy-link" href="/sex/' . $country->name . '">' . $country->name . '</a><br>', 'sosa');
+                _e('<a class="widget-taxonomy-link" href="/country/' . $country->name . '">' . $country->name . '</a><br>', 'sosa');
             }
         
         ?>
