@@ -23,8 +23,8 @@ $understrap_includes = array(
 	'/acf.php',                             // Load ACF Plugin.
 	'/acf-fieldgroups.php',                 // Load ACF Field Groups.
 	'/acf-blocks.php',                      // Register ACF Blocks.
-	'/acf-options.php',                      // Register ACF Options.
-	'/taxonomy-widget.php',                      // Register custom widget.
+	'/acf-options.php',                     // Register ACF Options.
+	'/taxonomy-widget.php',                 // Register custom widget.
 	'/customizer.php',                      // Customizer additions.
 	'/custom-comments.php',                 // Custom Comments file.
 	'/jetpack.php',                         // Load Jetpack compatibility file.
@@ -40,6 +40,15 @@ foreach ( $understrap_includes as $file ) {
 		trigger_error( sprintf( 'Error locating /inc%s for inclusion', $file ), E_USER_ERROR );
 	}
 	require_once $filepath;
+}
+
+if ( function_exists( 'add_image_size' ) ) { 
+	add_image_size('dog-card', 348, 384, 
+		[
+			'center',
+			'center',
+		]
+	);
 }
 
 /*function my_cptui_add_post_types_to_archives( $query ) { // this adds Custom Post Types into the WP category system

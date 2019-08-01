@@ -2,7 +2,7 @@
 
     <article class="card rounded-lg mt-4">
 
-        <img class="card-image rounded-top" src="<?php the_field('dog_image'); ?>">
+        <?php echo wp_get_attachment_image(get_field('dog_image'), 'dog-card'); ?>
 
         <a href="<?php the_permalink(); ?>" class="btn btn-outline-danger"><?php _e('Read More &raquo;', 'sosa'); ?></a>
 
