@@ -1,6 +1,6 @@
 <?php
 /**
- *  Archive for unspecified taxonomy
+ *  Archive for dog taxonomy
  * 
  * @package sosa
  */
@@ -13,7 +13,7 @@ get_header();
 $container = get_theme_mod( 'sosa_container_type' );
 ?>
 
-<div class="wrapper" id="wrapper-archive-taxonomy">
+<div class="wrapper" id="wrapper-archive-dogs">
 
     <div class="container" id="content">
 
@@ -36,6 +36,8 @@ $container = get_theme_mod( 'sosa_container_type' );
                         while (have_posts()) {
                             
                             the_post();
+
+                            get_template_part('loop-templates/content', 'dog-archive');
                         }
 
                         wp_reset_postdata(); // ALWAYS RESET POSTDATA
