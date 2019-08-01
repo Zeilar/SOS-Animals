@@ -16,61 +16,62 @@ $days = $age->d;
 
 // year pluralization
 if ($age->y > 1) {
-
     $years = $years . __(' years', 'sosa');
 
 } elseif ($age->y == 1) {
-
     $years = $years . __(' year', 'sosa');
 
 } else {
-
     $years = null;
 }
 
 // month pluralization
 if ($age->m > 1) {
-
     $months = $months . __(' months ', 'sosa');
 
 } elseif ($age->m == 1) {
-
     $months = $months . __(' month ', 'sosa');
 
 } else {
-
     $months = null;
 }
 
 // day pluralization
 if ($age->d > 1) {
-
     $days = $days . __(' days ', 'sosa');
 
 } elseif ($age->d == 1) {
-
     $days = $days . __(' day ', 'sosa');
 
 } else {
-
     $days = null;
 }
 
-// correct separator depending on which of years/months/days is written
-if ($age->m && $age->d) {
-    $years .= __(', ', 'sosa');
-}
+// some additional conditions for pluralization (it ain't much but it's honest work)
+if ($years && $months && $days) {
+    $age = $years . ' years, ' . $months . ' and ' . $days;
 
-if ($age->m && !$age->d) {
-    $years .= __(' and ', 'sosa');
-}
+} elseif ($years && $months && !$days) {
+    $age = $years . ' and ' . $months;
 
-if ($age->m && $age->d) {
-    $months .= __('and ', 'sosa');
-}
+} elseif ($years && !$months && $days) {
+    $age = $years . ' and ' . $days;
 
-// now the strings are prepared for the conditions below
-$age = $years . $months . $days;
+} elseif (!$years && $months && $days) {
+    $age = $months . ' and ' . $days;
+
+} elseif ($years && !$months && !$days) {
+    $age = $years;
+
+} elseif (!$years && $months && !$days) {
+    $age = $months;
+
+} elseif (!$years && !$months && $days) {
+    $age = $days;
+
+} else {
+    $age = $years . $months . $days;
+}
 
 ?>
 
