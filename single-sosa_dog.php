@@ -21,7 +21,7 @@ $container = get_theme_mod( 'sosa_container_type' );
             
             the_post();
             
-            get_template_part('global-templates/dog', 'single');
+            get_template_part('loop-templates/content', 'dog-single');
         }
 
         wp_reset_postdata(); // ALWAYS RESET POSTDATA
