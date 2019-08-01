@@ -84,7 +84,7 @@ $age = $years . $months . $days;
                 
                 <h1 class="text-center border-bottom pb-2 pt-2"><?php the_title(); ?></h1>
                 
-                <img class="img-fluid dog-image px-2 px-md-0 mx-md-auto mb-2 mt-2 d-block" src="<?php the_field('dog_image'); ?>" alt="<?php _e('Dog image', 'sosa'); ?>">
+                <?php echo wp_get_attachment_image(get_field('dog_image'), 'dog-card'); ?>
                 
                 <div class="dog-single-content px-2 pt-2 pb-2">
                     

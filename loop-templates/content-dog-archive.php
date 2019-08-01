@@ -10,7 +10,7 @@ $countries = get_the_terms(get_the_ID(), 'country');
 
     <article class="card rounded-lg">
 
-        <img class="card-image rounded-top" src="<?php the_field('dog_image'); ?>" alt="<?php _e('Dog image', 'sosa'); ?>">
+        <?php echo wp_get_attachment_image(get_field('dog_image'), 'dog-card'); ?>
 
         <div class="card-body">
 
