@@ -36,7 +36,7 @@ if ($dog->have_posts()) {
                         
                         $dog->the_post();
 
-                        get_template_part('loop-templates/content', 'dog');
+                        get_template_part('loop-templates/content', 'dog-archive');
                     }
 
                     wp_reset_postdata(); // ALWAYS RESET POSTDATA

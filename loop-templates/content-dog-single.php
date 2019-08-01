@@ -1,6 +1,6 @@
 <?php 
 
-$country = get_the_terms(get_the_ID(), 'country');
+$countries = get_the_terms(get_the_ID(), 'country');
 $sexes = get_the_terms(get_the_ID(), 'sex');
 
 $birth = get_field('dog_birth_date', false, false); 
@@ -16,10 +16,10 @@ $days = $age->d;
 
 // year pluralization
 if ($age->y > 1) {
-    $years = $years . __(' years', 'sosa');
+    $years .= ' years';
 
 } elseif ($age->y == 1) {
-    $years = $years . __(' year', 'sosa');
+    $years .= ' year';
 
 } else {
     $years = null;
@@ -27,10 +27,10 @@ if ($age->y > 1) {
 
 // month pluralization
 if ($age->m > 1) {
-    $months = $months . __(' months ', 'sosa');
+    $months .= ' months ';
 
 } elseif ($age->m == 1) {
-    $months = $months . __(' month ', 'sosa');
+    $months .= ' month ';
 
 } else {
     $months = null;
@@ -38,10 +38,10 @@ if ($age->m > 1) {
 
 // day pluralization
 if ($age->d > 1) {
-    $days = $days . __(' days ', 'sosa');
+    $days .= ' days ';
 
 } elseif ($age->d == 1) {
-    $days = $days . __(' day ', 'sosa');
+    $days .= ' day ';
 
 } else {
     $days = null;
@@ -49,28 +49,28 @@ if ($age->d > 1) {
 
 // some additional conditions for pluralization (it ain't much but it's honest work)
 if ($years && $months && $days) {
-    $age = $years . ' years, ' . $months . ' and ' . $days;
+    $age = sprintf(__('%s, %s and %s', 'sosa'), $years, $months, $days);
 
 } elseif ($years && $months && !$days) {
-    $age = $years . ' and ' . $months;
+    $age = sprintf(__('%s and %s', 'sosa'), $years, $months);
 
 } elseif ($years && !$months && $days) {
-    $age = $years . ' and ' . $days;
+    $age = sprintf(__('%s and %s', 'sosa'), $years, $days);
 
 } elseif (!$years && $months && $days) {
-    $age = $months . ' and ' . $days;
+    $age = sprintf(__('%s and %s', 'sosa'), $months, $days);
 
 } elseif ($years && !$months && !$days) {
-    $age = $years;
+    $age = __($years, 'sosa');
 
 } elseif (!$years && $months && !$days) {
-    $age = $months;
+    $age = __($months, 'sosa');
 
 } elseif (!$years && !$months && $days) {
-    $age = $days;
+    $age = __($days, 'sosa');
 
 } else {
-    $age = $years . $months . $days;
+    $age = sprintf(__('%s %s %s', 'sosa'), $years, $months, $days);
 }
 
 ?>
@@ -107,7 +107,7 @@ if ($years && $months && $days) {
                         
                         <div class="field-area">
 
-                            <p class="dog-age mb-0 px-2 pt-2 pb-2"><?php
+                            <p class="dog-sex mb-0 px-2 pt-2 pb-2"><?php
 
                             if ($sexes) {
                             
@@ -123,6 +123,38 @@ if ($years && $months && $days) {
             
                             ?></p>
 
+                            <div class="field-area">
+
+                        </div> <!-- field-area -->
+
+                    </li> <!-- list-group-item -->
+
+                    <li class="list-group-item px-0 pt-0 pb-0 d-flex flex-row">
+
+                        <div class="append-area border-right">
+
+                            <p class="text-center dog-age mb-0 px-2 pt-2 pb-2"><?php _e('Country', 'sosa'); ?></p>
+
+                        </div> <!-- append-area -->
+                        
+                        <div class="field-area">
+
+                        <p class="dog-sex mb-0 px-2 pt-2 pb-2"><?php
+
+                            if ($countries) {
+
+                                foreach ($countries as $country) {
+
+                                    echo $country->name;
+                                }
+
+                            } else {
+
+                                echo "N/A";
+                            }
+
+                            ?></p>
+                      
                         </div> <!-- field-area -->
 
                     </li> <!-- list-group-item -->

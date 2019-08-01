@@ -36,6 +36,8 @@ $container = get_theme_mod( 'sosa_container_type' );
                         while (have_posts()) {
                             
                             the_post();
+
+                            get_template_part('loop-templates/content', 'dog-archive');
                         }
 
                         wp_reset_postdata(); // ALWAYS RESET POSTDATA
