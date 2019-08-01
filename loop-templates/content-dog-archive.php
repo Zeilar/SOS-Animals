@@ -28,7 +28,7 @@ $countries = get_the_terms(get_the_ID(), 'country');
 
                     <span class="card-taxonomy">
                     
-                        <a class="fa fa-tag card-taxonomy-link" href="<?php get_home_url(); ?>/sex/<?php echo lcfirst($sex->name); ?>">
+                        <a class="fa fa-tag card-taxonomy-link" href="<?php echo get_term_link($sex->name, 'sex'); ?>">
                         
                             <?php _e($sex->name, 'sosa') ?>
                         
@@ -46,7 +46,7 @@ $countries = get_the_terms(get_the_ID(), 'country');
 
                 <span class="card-taxonomy">
 
-                    <a class="fa fa-tag card-taxonomy-link" href="<?php get_home_url(); ?>/size/<?php echo lcfirst($size->name); ?>">
+                    <a class="fa fa-tag card-taxonomy-link" href="<?php echo get_term_link($size->name, 'size'); ?>">
                     
                         <?php _e($size->name, 'sosa') ?>
                     
@@ -64,7 +64,7 @@ $countries = get_the_terms(get_the_ID(), 'country');
 
                 <span class="card-taxonomy">
 
-                    <a class="fa fa-tag card-taxonomy-link" href="<?php get_home_url(); ?>/country/<?php echo lcfirst($country->name); ?>">
+                    <a class="fa fa-tag card-taxonomy-link" href="<?php echo get_term_link($country->name, 'country'); ?>">
                     
                         <?php _e($country->name, 'sosa') ?>
                     
